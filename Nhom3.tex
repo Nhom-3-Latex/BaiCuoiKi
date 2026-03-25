@@ -1,63 +1,55 @@
 \documentclass[11pt]{beamer}
 \usepackage[utf8]{vietnam}
+%\usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usetheme{Madrid}
+\usetheme{CambridgeUs}
+%Làm chữ Bảng đen và hiện Bảng 1
+\setbeamercolor{caption name}{fg=black}
+\setbeamertemplate{caption}[numbered]
+%các gói khai báo tô bảng màu và chỉnh độ rộng cột , hàng
+\usepackage{array}
+\usepackage[table]{xcolor}
 \begin{document}
-	\author{Nam dep zai}
-	\title{Báo cáo kết thúc môn}
-	\subtitle{Tiêu đề con}
-	%\logo{}
-	\institute{Khoa Toán - Thống kê}
-	\date{24.03.2026}
-	\subject{ABC}
+	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
+	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
+	\subtitle{\textbf{\textit{Chủ đề: Chèn các kí hiệu trong \LaTeX}}}
+	\institute[Toán-thống kê]{\large{\textbf{\underline{Toán-thống kê}}\\[1em]
+			\textbf{\underline{Đại học Tôn Đức Thắng}}}}
+	
+	\date[Ngày báo cáo: 31.03.2026]{\textbf{\textit{\underline{Ngày báo cáo: 31.03.2026}}}}
+	%\subject{}
 	%\setbeamercovered{transparent}
 	%\setbeamertemplate{navigation symbols}{}
-	\begin{frame}%[plain] slide thông tin plain
+	\begin{frame}[plain]%plain là Slide sẽ không có header, footer, thanh tiêu đề…
 		\maketitle
+		\centering
+		\includegraphics[scale=0.2]{ảnh latex/TĐT_logo.png}
 	\end{frame}
 	
-	\begin{frame}{Tiêu đề của slide 1}
-		Nội dung cho phương trình $y=x$
+	\begin{frame}{\textbf{\textit{Phân công công việc}}}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}{\textbf{MSSV}} &\color{white}{\textbf{Họ tên}} &\color{white}{\textbf{Nhiệm vụ}} &\color{white}{\textbf{Tỉ lệ}} & \color{white}{\textbf{Chữ kí}}\\
+				\hline
+				C2500061 & Trần Hoài Nam & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500*** & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500*** & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500*** & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500*** & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+			\end{tabular}
+			\caption{Phân công nhiệm vụ}
+		\end{table}
 	\end{frame}
-	
-	
-	\begin{frame}{Tiêu đề của slide 2}
-		Nội dung cần nhấn mạnh
-		
-		\begin{block}{Tiêu đề block}
-			Nội dung của block
-		\end{block}
-		
+	\begin{frame}{Tóm tắ nội dung báo cáo}
+		\begin{itemize}
+			\item[-]
+		\end{itemize}
 	\end{frame}
-	
-	
-=======
-    My name is Hung
-    \author{Nguyễn Hữu Cần}
-    \title{Báo cáo kết thúc môn}
-    \subtitle{Tiêu đề con}
-    %\logo{}
-    \institute{Khoa Toán - Thống kê}
-    \date{24.03.2026}
-    \subject{ABC}
-    %\setbeamercovered{transparent}
-    %\setbeamertemplate{navigation symbols}{}
-    \begin{frame}%[plain] slide thông tin plain
-       	\maketitle
-    \end{frame}
-    
-    \begin{frame}{Tiêu đề của slide 1}
-       	Nội dung cho phương trình $y=x$
-    \end{frame}
-    
-    
-    \begin{frame}{Tiêu đề của slide 2}
-       	Nội dung cần nhấn mạnh
-       	
-       	\begin{block}{Tiêu đề block}
-       		Nội dung của block
-       	\end{block}
-       	
-    \end{frame}
->>>>>>> 527f848dcdca004fdb826d9d4269e43eaa2a37ef
 \end{document}
