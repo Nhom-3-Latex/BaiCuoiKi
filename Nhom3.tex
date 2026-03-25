@@ -9,6 +9,14 @@
 %các gói khai báo tô bảng màu và chỉnh độ rộng cột , hàng
 \usepackage{array}
 \usepackage[table]{xcolor}
+% Chỉnh logo góc trái trên mọi slide
+\setbeamertemplate{headline}{%
+	\leavevmode%đảm bảo LaTeX đang ở horizontal mode (xếp các vật thể theo hàng ngang, từ trái sang phải.)
+	\hbox{%tạo một “hộp ngang”, mọi thứ bên trong xếp theo hàng ngang, không bị xuống dòng.
+		\includegraphics[height=0.7cm,width=1.5cm]{logo_tdtu/TĐT_logo.png}%
+		\hfill%
+	}%
+}
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -17,13 +25,14 @@
 			\textbf{\underline{Đại học Tôn Đức Thắng}}}}
 	
 	\date[Ngày báo cáo: 31.03.2026]{\textbf{\textit{\underline{Ngày báo cáo: 31.03.2026}}}}
+	%\logo{\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}}
 	%\subject{}
 	%\setbeamercovered{transparent}
 	%\setbeamertemplate{navigation symbols}{}
-	\begin{frame}[plain]%plain là Slide sẽ không có header, footer, thanh tiêu đề…
+	\begin{frame}%[plain]plain là Slide sẽ không có header, footer, thanh tiêu đề…
 		\maketitle
 		\centering
-		\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}
+		%\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}
 	\end{frame}
 	
 	\begin{frame}{\textbf{\textit{Phân công công việc}}}
@@ -35,21 +44,29 @@
 				\hline
 				C2500061 & Trần Hoài Nam & $\cdots$ & $\cdots$ & $\cdots$\\
 				\hline
-				C2500*** & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
+				C2500174 & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
 				\hline
-				C2500*** & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
+				C2500055 & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
 				\hline
-				C2500*** & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
+				C2500010 & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
 				\hline
-				C2500*** & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
+				C2500049 & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
 				\hline
 			\end{tabular}
 			\caption{Phân công nhiệm vụ}
 		\end{table}
 	\end{frame}
-	\begin{frame}{Tóm tắ nội dung báo cáo}
-		\begin{itemize}
-			\item[-]
-		\end{itemize}
+	\begin{frame}{\textbf{\textit{Tóm tắt}}}
+		\begin{block}{\textbf{Các mục chính}}
+			\begin{itemize}
+				\pause
+				\item Ký tự Hy Lạp, các hàm toán học trong \LaTeX
+				\pause
+				\item Ký tự đặc biệt trong \LaTeX
+				\pause
+				\item Các biểu tượng hình ảnh có sẵn trong \LaTeX
+				\pause
+			\end{itemize}
+		\end{block}
 	\end{frame}
 \end{document}
