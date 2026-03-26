@@ -1,13 +1,21 @@
-\frametitle{\textbf {\textit {Biểu tượng thực tế}}}
-\begin{block}{Khai báo:}
-			\verb|Môi trường usepackage{marvosym}|
-		\end{block}
-		\pause
-		\begin{exampleblock}{Ví dụ: }
-			\Telefon: \verb|\Telefon|, \Letter: \verb|\Letter|, \EUR: \verb|\EUR|, \Lightning: \verb|\Lightning|
-		\end{exampleblock}
-		\pause
-		\begin{block}{Mục đích:}
-			Cung cấp các biểu tượng mang tính thực tế.\\
-			Khác với pifont (thiên về kí hiệu), marvosym có icon như: điện thoại, email, tiền tệ, cảnh báo
-		\end{block}
+\frametitle{Ưu điểm và Nhược điểm của biểu tượng có sẵn}
+\pause
+		\begin{columns}
+			\column{0.45\textwidth}
+			\begin{block}{Ưu điểm:}
+				\begin{itemize}
+					\item Không cần file ảnh
+					\item Dễ sử dụng
+					\item Nhẹ, chạy nhanh
+					\item Có thể chèn trực tiếp trong văn bản.
+				\end{itemize}
+			\end{block}
+			\pause
+			\column{0.45\textwidth}
+			\begin{alertblock}{Nhược điểm:}
+				\begin{itemize}
+					\item Không đa dạng bằng hình ảnh thật
+					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
+				\end{itemize}
+			\end{alertblock}
+		\end{columns}
