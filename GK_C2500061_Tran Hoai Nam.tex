@@ -1,0 +1,430 @@
+\documentclass[12pt,a4paper,fleqn,twoside]{article}
+\setlength{\mathindent}{0pt}
+%\usepackage[hang,flushmargin]{footmisc}
+\renewcommand{\footnoterule}{%
+	\kern -3pt
+	\hrule width 2cm
+	\kern 2.6pt
+}
+\usepackage[utf8]{vietnam}
+\AtBeginDocument{
+	\renewcommand{\refname}{References}
+	\renewcommand{\bibname}{References}
+}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{titlesec}
+\titleformat{\subsection}
+{\itshape}        % format
+{\thesubsection} % label
+{0.5em}             % spacing
+{}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\fancypagestyle{special}{
+	\fancyhf{}
+	\fancyhead[L]{}
+	\fancyhead[R]{}
+	\fancyhead[C]{\href{https://doi.org/10.1016/j.aml.2010.12.019}{{\footnotesize Applied Mathematics Letters 24 (2021) 735--741 }}}
+	}
+\pagestyle{fancy}%header
+\fancyhf{} % xóa toàn bộ header/footer mặc định
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{{\footnotesize\textit{A.-G.Wu et al./Applied Mathematics Letters 24 (2011)735--741}}}
+\fancyhead[LE]{\thepage} % Left header Even pages
+\fancyhead[RO]{\thepage} % Right header Odd pages
+\makeatletter
+\renewcommand{\qedsymbol}{\ensuremath{\square}}
+\renewcommand{\qed}{\quad\qedsymbol}
+\makeatother
+\renewcommand{\proofname}{\textnormal{\textbf{proof}}}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\usepackage{thmtools,enumerate}
+\usepackage{xcolor}
+\usepackage{nameref}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\emergencystretch=2em
+\title{\large Trường Đại học Tôn Đức Thắng\\
+ Khoa Toán - Thống kê\\[2em]
+ TIỂU LUẬN GIỮA KỲ\\
+ Năm học: 2025-2026 Học kỳ: 2\\
+Môn Học: Latex\\
+Mã môn học: C02045\\[2em]
+Họ và tên sinh viên thực hiện: Trần Hoài Nam\\
+MSSV: C2500061\\
+Mã đề: 114\\[2em]
+Giảng viên giảng dạy: Nguyễn Hữu Cần}
+\date{TP.HCM, ngày ... tháng ... năm ...}
+
+\begin{document}
+	\maketitle
+	\renewcommand{\thesection}{\arabic{section}.}
+	\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+	\renewcommand{\proofname}{\textnormal{\textbf{Proof}}}
+	\thispagestyle{empty}
+	\newpage
+	\thispagestyle{empty}
+
+	Lời cam kết:
+	\begin{itemize}
+		\item[-] Tiểu luận này được tôi biên soạn lại bằng phần mềm \LaTeX với mục đích hoàn
+		thành môn học thực hành Soạn thảo tài liệu khoa học bằng \LaTeX, ngoài ra
+		không còn mục đích nào khác.
+		\item[-] Tiểu luận này được biên soạn bằng \LaTeX dựa trên tài liệu sau:
+		\begin{itemize}
+			\item[+] Tiêu đề: ...
+			\item[+] Tác giả: ...
+		\end{itemize}
+	\end{itemize}
+	\begin{flushright}
+		\begin{minipage}{0.4\textwidth}
+			\centering
+			Sinh viên thực hiện\\[0.5cm]
+			\textit{(kí tên)}\\[0.5cm]
+			Trần Hoài Nam
+		\end{minipage}
+	\end{flushright}
+	\newpage
+	\setcounter{page}{735}
+	\thispagestyle{special}
+	\renewcommand{\thefootnote}{$*$}
+	\noindent{{\LARGE \bfseries{On conjugate product of complex polynomials}}}\\[1em]
+	{\large \textbf{Ai-Guo Wu$^{\hyperref[a]{a},\hyperref[c]{c},}$\footnote{\scriptsize Corresponding author at: Harbin Institute of Technology Shenzhen Graduate School, Shenzhen 518055, PR China.\\
+			\hspace*{1.8em} E-mail addresses:\href{mailto:ag.wu@163.com}{ag.wu@163.com} (A.-G. Wu), \href{mailto:g.r.duan@hit.edu.cn}{g.r.duan@hit.edu.cn} (G.-R. Duan), \href{mailto:megfeng@cityu.edu.hk}{megfeng@cityu.edu.hk} (G. Feng).\\[1em]
+			0893-9659/\$-see front matter \copyright 2021 Published by Elsevier Ltd\\ \href{https://doi.org/10.1016/j.aml.2010.12.019}{doi:10.1016/j.aml.2010.12.019}}, 
+			Guang-Ren Duan$^{\hyperref[b]{b}}$, Gang Feng$^{\hyperref[c]{c}}$, Wanquan Liu$^{\hyperref[d]{d}}$}}\\[0.5 em]
+	\phantomsection
+	{\textsuperscript{a}\label{a}}{\fontsize{8pt}{8pt}\selectfont \textit{Harbin Institute of Technology Shenzhen Graduate School, Shenzhen 518055, PR China}}\\
+	\phantomsection
+	{\textsuperscript{b}\label{b}}{\fontsize{8pt}{8pt}\selectfont \textit{Center for Control Theory and Guidance Technology, Harbin Institute of Technology, Harbin 150001, PR China}}\\
+	\phantomsection
+	{\textsuperscript{c}\label{c}}{\fontsize{8pt}{8pt}\selectfont \textit{Department of Manufacturing Engineering and Engineering Management, City University of Hong Kong, Kowloon, Hong Kong}}\\
+	\phantomsection
+	{\textsuperscript{d}\label{d}}{\fontsize{8pt}{8pt}\selectfont \textit{Department of Computing, Curtin University, Perth WA 6102, Australia}}
+	\section{Introduction}
+	In \cite{1}, in order to establish a unified approach for solving the so-called Sylvester-polynomial-conjugate matrix equation, the conjugate product of complex polynomial matrices was introduced. Many interesting properties of the conjugate product were derived. In addition, Corollary 1 in \cite{1} implies that the conjugate product of two polynomial matrices can also carried out by the rule similar to the ordinary matrix product.\\
+	\indent{In the framework of the ordinary product, there are some well-known concepts, such as divisibility, greatest common divisors, coprimeness, and so on. Regarding these content, one can refer to some textbooks, for example \cite{2,3}. In this paper, the concept of divisibility was first introduced in the framework  of the conjugate product. Then it is shown that division algorithm with remainder also hold in the framework of the conjugate product. Different from the case of the ordinary polynomial product, the division algorithm in the framework of the conjugate product has two forms since the conjutage product does not obey commutativity law. The concepts of the greatest common right and left divisors are introduced, and the Euclidean algorithm for obtaining the greatest common divisors are provided. Finally, The coprimeness of two polynomials are investigated.}\\
+	\indent{Throughout this paper, for a complex matrix C and a positive integer number $k$, we define $C^{*k}=\overline{C^{*(k-1)}}$} with $C^{*0}=C$, where $\overline{X}$ denotes the matrix obtained by taking the complex conjugate of each element of $X$. With this definition, it is obvious that\\
+	\[C^{*k}=
+	\begin{cases}
+		C, & \text{for even } k \\
+		\overline{C}, & \text{for odd } k.
+	\end{cases}\]
+	For such an operation, one can obtain for two positive integers $k$ and $l$
+	\begin{equation}
+		(C^{*k})^{*l}=C^{*(k+l)}.
+	\end{equation}
+	\newpage
+	\section{Definition of conjugate product}
+	In order to investigate the so-called Sylvester-polynomial-conjugate matrix equation, the concept of the conjugate product is in troduced in \cite{1}. The definition is as follows.
+	\begin{definition}\label{Definition 1}
+		\textnormal{For two polynomial matrices $A(s)= \sum_{i=0}^{m}A_i s^i \in \mathbb{C}^{p\times q}[s]$ and $B(s)=\sum_{j=0}^{n}B_i s^j \in \mathbb{C}^{q\times m}[s]$, their conjutage product is defined as} 
+		\begin{equation*}
+			A(s)\circledast B(s)= \displaystyle \sum_{i=0}^{m} \sum_{j=0}^{n} A_i B^{*i}_j s^{i+j}.
+		\end{equation*} 
+	\end{definition}
+	In \cite{1}, some interesting properties of the conjugate product have been derived.
+	\begin{lemma}\label{lemma 1}
+		Given $A(s) \in  \mathbb{C}^{p\times q}[s], D(s) \in \mathbb{C}^{p\times q}[s], B(s) \in \mathbb{C}^{p\times \varphi}[s],E(s) \in \mathbb{C}^{p\times \varphi}[s], C(s)\in \mathbb{C}^{\varphi \times \omega}[s]$, the following relations hold:\\
+		\begin{enumerate}[\normalfont 1.]
+			\item Left distributivity: $(A(s)+D(s)) \circledast B(s)= A(s) \circledast B(s) + D(s) \circledast B(S)$;
+			\item Right distributivity: $A(s) \circledast (B(s) + E(s))= A(s) \circledast B(s) + A(s) \circledast E(s)$;
+			\item Associativity: $(A(s) \circledast B(s))\circledast C(s)= A(s) \circledast (B(s) \circledast C(s))$.
+		\end{enumerate}
+	\end{lemma}
+	\begin{lemma}
+		Let $A(s) \in \mathbb{C}^{p_1 \times q}[s],B(s) \in \mathbb{C}^{p_2 \times q}[s], C(s) \in \mathbb{C}^{q \times \varphi}[s].$ Then
+		\[
+		\begin{bmatrix}
+			A(s) \\
+			B(s)
+		\end{bmatrix}
+		* C(s)=
+		\begin{bmatrix}
+			A(s) * C(s) \\
+			B(s) * C(s)
+		\end{bmatrix}\]
+	\end{lemma}
+	\begin{lemma}
+		Let \(A(s)\in \mathbb{C}^{p \times q_1}[s], B(s) \in \mathbb{C}^{p \times q_2}[s], C(s) \in \mathbb{C}^{\varphi \times p}[s].\) Then
+		\begin{equation*}
+			C(s) \circledast [A(s)\quad B(s)]= [C(s) \circledast A(s)\quad C(s) \circledast B(s)].
+		\end{equation*}
+	\end{lemma}
+	\begin{corollary}
+		Let \( A(s)=[a_{ik}(s)]_{m \times r}[s], \mathbb{C}^{m \times r}[s],B(s)=[b_{kj}(s)]_{r \times p}\in \mathbb{C}^{r \times p}[s].\) Then, 
+		\[C(s)\circledast B(s)= \left[\displaystyle \sum_{k=1}^{r} a_{ik}(s)\circledast b_{kj}(s)\right]_{m \times p}.\]
+	\end{corollary}
+	\section{Conjugate product for complex polynomials}
+	\subsection{Polynomial ring $(\mathbb{C}[s], +,\circledast)$}
+		For $f(s)= \sum_{i=0}^{t} a_i s^i \in \mathbb{C}[s]$ with $a_i \neq 0, t$ is called its degree, and we denote $t= \deg f(s)$. In addition,, the degree of polynomial 0 is defined as $-\infty$, that is, $\deg 0= -\infty.$ By \hyperref[Definition 1]{Definition 1}, the following result is obvious.
+	\begin{proposition}
+		Let $f(s),g(s) \in \mathbb{C}[s].$ Then,
+		\[\deg (f(s)\circledast g(s))=\deg f(s)+\deg g(s).\]
+	\end{proposition}
+	Firstly, we investigate algebraic properties of \(\mathbb{C}[s]\) equipped with the operation $\circledast$.
+	\begin{theorem}
+		The set \(\mathbb{C}[s]\) equipped with the operation $+$ and $\circledast $ is a ring.
+		\begin{proof}
+			
+		 \textnormal{Let $f(s),g(s),h(s)\in \mathbb{C}[s].$ For the operation $+$, it is well known that}
+			\begin{enumerate}[(1)]
+				\item Commutativity: $f(s)+g(s=g(x)+f(x);$
+				\item Associativity: $(f(s)+g(s))+h(s)=g(s)+(f(s)+h(s));$
+				\item 0 is the additive identity: $0+f(s)=f(s);$
+				\item $f(s)+(-f(s))=0.$\\
+				\textnormal{for the operation $\circledast$, it follows from \hyperref[lemma 1]{lemma 1} that} 
+				\item $f(s)\circledast(g(s)\circledast h(s))=(f(s)\circledast g(s))\circledast h(s);$
+				\item $f(s)\circledast(g(s) + h(s))=f(s)\circledast g(s) + f(s)\circledast h(s);$
+				\item $(f(s)+g(s))\circledast h(s)= f(s)\circledast h(s)+g(s)\circledast h(s).$
+			\end{enumerate}
+				In addition, for any $f(s)=\sum_{i=0}^{t} a_i s^i$, by \hyperref[Definition 1]{Definition 1}, one has 
+			\begin{align*}
+				1\circledast f(s) &=\left(1s^0\right)\circledast \left(\displaystyle\sum_{i=0}^{t} a_i s^i\right) \\
+				&=\sum_{i=0}^{t}1 \times a_{i}^{*0}s^{i+0}\\ 
+				&=f(s);\\
+			\end{align*}
+			and
+			\begin{align*}
+				f(s)\circledast 1&= \left(\displaystyle\sum_{i=0}^{t}a_i s^i\right)\circledast (1s^0)\\
+				&=\sum_{i=0}^{t}a_i \times 1^{*i}s^{i+0}\\
+				&=f(s).
+			\end{align*}
+			The previous two relations imply that 
+			\begin{enumerate}[(1)] 
+				\setcounter{enumi}{7}
+				\item 1 is an identity in the framework of the conjugate product.\\
+				the above facts imply that the conclusion is true.\qedhere
+			\end{enumerate}
+			%the above facts imply that the conclusion is true.
+		\end{proof}	
+	\end{theorem}
+	\subsection{Division with remainder in $(\mathbb{C}[s],+,\circledast)$}
+	In the ordinary polynomial ring $(\mathbb{C}[s],+,\times)$, there exist some concepts, such as common divisors, greater common divisors, coprimeness. I this section, we generalize these concepts to $(\mathbb{C}[s],+,\circledast)$. Such generalization is not trivial since the conjugate product is not commutative.
+	\begin{definition}\normalfont
+		Given $f(s),g(s),h(s) \in \mathbb{C}(s)$, if they satisfy
+		\[f(s)=g(s)\circledast h(s)\]
+		then $h(s) (g(s)$, respectively) is called a right (left, respectively) divisor of $f(s);f(s)$ is called a right (left, respectively) multiple of $g(s) (h(s)$,respectively); $f(s)$ is said to be right (left) divisible by $h(s) (g(s))$. It is denoted by $g(s)|_{\circledast l}f(s),h(s)|_{\circledast r}f(s)$.
+	\end{definition}
+	\begin{definition}\normalfont
+		A polynomial $f(s) \in \mathbb{C}(s)$ is said to divisible by $g(s)$ if $g(s)|_{\circledast l}f(s)\, \text{and}\, h(s)|_{\circledast r}f(s)$.It is denoted by $g(s)|_\circledast f(s)$.\\
+		\indent By using the above definition, the following conclusion can be easily obtained.
+	\end{definition}
+	\begin{theorem}\label{theorem 2}
+		Let $f(s),g(s),m(s),n(s)$ and $c(s)$ be polynomial in $\mathbb{C}[s]$. Then,
+		\begin{enumerate}[\normalfont(1)]
+			\item $c(s)|_{\circledast r}f(s),c(s)|_{\circledast r}g(s) \Longrightarrow c(s)|_{\circledast r}(m(s)\circledast f(s)+n(s)\circledast g(s)); $
+			\item $c(s)|_{\circledast l}f(s),c(s)|_{\circledast l}g(s) \Longrightarrow c(s)|_{\circledast r}(f(s)\circledast m(s)+g(s)\circledast n(s)). $
+		\end{enumerate}
+	\end{theorem}
+	\begin{theorem}\label{theorem 3}
+		(The Division Algorithm). For two polynomials $f(s),g(s)\in \mathbb{C}(s)$ with $g(s)\neq 0$, there exist polynomials $h_r(s), h_l(s),q_r(s)$ and $q_l(s)$ such that
+		\begin{align}
+			f(s)&=g(s)\circledast h_r(s)+q_r(s),\label{nyc1}\\
+			f(s)&=h_l(s)\circledast g(s)+q_l(s).
+		\end{align}
+		If $q_r(s)\neq 0,$ then $\deg q_r(s) < \deg g(s),$ and $h_r(s)$ and $q_r(s)$ are unique; if $q_l(s)\neq 0$, then $\deg q_l(s)<g(s),$ and $h_l(s)$ and $q_l(s)$ are unique.
+	\end{theorem}
+	\begin{proof}
+		We only consider the case \eqref{nyc1}.\\
+		\indent Firstly, we consider the later part. If there exist $h_{r2}(s)$ and $q_{r2}(s)$ satisfying $f(s)=g(s)\circledast h_{r2}(s)+q_{r2}(s)$ with $q_{r2}(s)\neq 0, \deg q_{r2}(s)<\deg g(s),$ then by using \hyperref[lemma 1]{lemma 1} one has
+		\begin{align}
+			g(s)\circledast(h_r(s)-h_{r2}(s))=q_{r2}(s)-q_r(s).\label{nyc2}
+		\end{align}
+		If $q_{r2}(s)-q_r(s)\neq 0$, it follows that $\deg(q_{r2}(s)-q_r(s))\ge \deg g(s).$ However $\deg(q_{r2}(s)-q_r(s))<\deg g(s)$ since $\deg q_{r2}(s)<\deg g(s)$ and $\deg q_r(s)<\deg g(s).$ This contradiction implies that $q_{r2}(s)=q_r(s).$ Combining this fact with \eqref{nyc2} immediately gives that $h_r(s)=h_{r2}(s).$ The proof of the latter part is thus completed.\\
+		\indent Now, we prove the former part. If $\deg f(s)<\deg g(s)$, it is easily known that $h_r(s)=0,q_r(s)=f(s)$ satisfy \eqref{nyc1}. Now, we consider the case where $\deg f(s)\ge \deg g(s)$. Denote
+		\[f(s)=\displaystyle\sum_{i=0}^{n}a_i s^i,\quad g(s)=\displaystyle\sum_{i=0}^{n}b_i s^i,\quad a_n\neq0,\:b_m\neq0,\: n\ge m.\]
+		A direct calculation gives
+		\begin{equation}
+			\begin{aligned}
+				f_1(s)&=f(s)-g(s)\circledast \left(\frac{a_n}{b_m}\right)^{*m}s^{n-m}\\
+				&=f(s)-\left(\displaystyle\sum_{i=0}^{m}b_i\left(\left(\frac{a_n}{b_m}\right)^{*m}\right)^{*i}s^{i+n-m}\right)\\
+				&=f(s)-a_ns^n -\displaystyle\sum_{i=0}^{m-1}b_i \left(\left(\frac{a_n}{b_m}\right)^{*m}\right)^{*i}s^{i+n-m}\\
+				&=\displaystyle\sum_{i=0}^{n-1}a_is^i-\sum_{i=0}^{m-1}b_i\left(\left(\frac{a_n}{b_m}\right)^{*m}\right)^{*i}s^{i+n-m}.
+			\end{aligned}
+		\label{nyc3}
+		\end{equation}
+		If $f_1(s)\neq 0$, denote $n_1=\deg f_1(s)$, and let $\alpha_{n_{1}}$ be the leading coefficient of $f_1(s).$ It is obvious that $n_1<n.$ If $n_1 \ge m$, one takes 
+		\[f_2(s)=f_1(s)-g(s)\circledast \left(\frac{\alpha_{n_{1}}}{b_m}\right)^{*m}s^{n_1-m}.\]
+		If $f_2(s)\neq 0$, denote $n_2=\deg f_2(s)$, and let $\alpha_{n_{2}}$ be the leading coefficient of $f_2(s).$ Similarly to the derivation of \eqref{nyc3}, it is easily obtained that $n_2<n_1.$ If $n_2 \ge m,$ one takes
+		\[f_3(s)=f_2(s)-g(s)\circledast \left(\frac{\alpha_{n_{2}}}{b_m}\right)^{*m}s^{n_2-m}.\]
+		Along this line, it is known that there is a $k$ such that
+		\[f_k(s)=f_{k-1}(s)-g(s)\circledast \left(\frac{\alpha_{n_{k-1}}}{b_m}\right)^{*m}s^{n_{k-1}-m},\]
+		where $f_k(s)=0,$ or $f_k(s)\neq 0,n_k =\deg f_k(s)<m.$ With the above procedure, it is derived that 
+		\[f(s)-g(s)\circledast \left[\left(\frac{a_n}{b_m}\right)^{*m}s^{n-m}+\left(\frac{\alpha_{n_{1}}}{b_m}\right)^{*m}s^{n_1-m}+\left(\frac{\alpha_{n_{k-1}}}{b_m}\right)^{*m}s^{n_{k-1}-m}\right]=f_k(s).\]
+		Choose 
+		\begin{align*}
+			h_r(s)&=\left(\frac{a_n}{b_m}\right)^{*m}s^{n-m}+\left(\frac{\alpha_{n_{1}}}{b_m}\right)^{*m}s^{n_1-m}+\left(\frac{\alpha_{n_{k-1}}}{b_m}\right)^{*m}s^{n_{k-1}-m},\\q_r(s)&=f_k(s),
+		\end{align*}
+		where $n_i < n, i=1,2,\cdots, k-1; n_k < m.$ Then the relation \eqref{nyc1} holds, and $\deg q_r(s) < \deg g(s).$ The proof is thus completed.
+	\end{proof}
+	The procedure to obtain polynomials $h_r(s)$ and $q_r(s)$ is refered to as division with reminder.
+	\begin{proposition}
+		For $f(s),g(s), \psi(s) \in \mathbb{C}[s],$
+		\begin{enumerate}[\normalfont (1)]
+			\item If $f(s)|_{\circledast r}g(s),g(s)|_{\circledast r}\psi(s)$, then $f(s)|_{\circledast r}\psi(s)$. If $f(s)|_{\circledast l}g(s),g(s)|_{\circledast l}\psi(s)$, then $f(s)|_{\circledast l}\psi(s).$
+			\item If $f(s)|_{\circledast r}\psi(s),g(s)|_{\circledast r}\psi(s)$, then $(f(s)+g(s))|_{\circledast r}\psi(s).$ If $f(s)|_{\circledast l}\psi(s),g(s)|_{\circledast l}\psi(s)$, then $(f(s)+g(s))|_{\circledast l}\psi(s).$
+			\item $a|_{\circledast l}f(s),a|_{\circledast r}f(s)$ for any $a \in \mathbb{C}$.
+		\end{enumerate}
+	\end{proposition}
+	\subsection{Greatest common divisors in $(\mathbb{C}[s],+,\circledast)$}
+	\begin{definition}
+		\normalfont
+		For $f_1(s), f_2(s)\in \mathbb{C}[s],$ if there exists a polynomial $g_r(s)\in \mathbb{C}[s]$ such that $g_r(s)|_{\circledast r}f_i(s), i=1,2,$ then $g_r(s)$ is called a common right divisor of $f_1(s)$ and $f_2(s);$ if there exist a polynomial $g_l(s)$ such that $g_l(s)|_{\circledast l}f_i(s),i=1,2,$ then $g_l(s)$ is called a common left divisor of $f_1(s)$ and $f_2(s)$.
+	\end{definition}
+	\begin{definition}
+		\normalfont
+		A greatest common right divisor of $f_1(s),f_2(s)\in \mathbb{C}[s]$ is any polynomial $g_r(s)\in \mathbb{C}[s]$ with the following properties:
+		\begin{enumerate}[(1)]
+			\item $g_r(s)|_{\circledast r}f_i(s),i=1,2;$
+			\item If $g_{r1}(s)$ is any other common right divisor of $f_1(s),f_2(s),$ then $g_{r1}(s)|_{\circledast r}g_r(s);i.e.,$ there exists a $\omega(s)\in \mathbb{C}[s]$ such that $g_r(s)=\omega_r(s)\circledast g_{r1}(s).$ 
+		\end{enumerate}
+	\end{definition}
+	\begin{definition}
+		\normalfont
+		A greatest common left divisor of $f_1(s),f_2(s)\in \mathbb{C}[s]$ is any polynomial $g_l(s)\in \mathbb{C}[s]$ with the following properties:
+		\begin{enumerate}[(1)]
+			\item  $g_l(s)|_{\circledast l}f_i(s),i=1,2;$
+			\item  If $g_{l1}(s)$ is any other common left divisor of $f_1(s),f_2(s),$ then $g_{l1}(s)|_{\circledast l}g_l(s);i.e.,$ there exists a $\omega(s)\in \mathbb{C}[s]$ such that $g_l(s)=g_{l1}(s)\circledast \omega_{l}(s).$\\[1em]
+			On greatest common divisors, one has the following theorem.
+		\end{enumerate}.
+	\end{definition}
+	\begin{theorem}\label{theorem 4}
+		For any two polynomials $f(s),g(s)\in \mathbb{C}[s]$, not both 0, a greatest common right (left) divisor exists.
+		\begin{proof}
+			If one of $f(s)$ and $g(s)$ is 0, say $g(x),$ it is obvious that $f(x)$ is a greatest common right divisor.\\
+			\indent Now, it is assumed that $f(s)$ and $g(s)$ are two nonzero polynomials with $\deg f(s)\ge \deg g(s).$ By successively applying the division algorithm in \hyperref[theorem 3]{theorem 3}, one can obtain 
+			\begin{equation}\label{cases 6}
+				\begin{cases}
+					f(s)=\psi_1(s)\circledast g(s)+r_1(s),\quad \deg r_1(s)<\deg g(s);\\
+					g(s)=\psi_2(s)\circledast r_1(s)+r_2(s),\quad \deg r_2(s)<\deg g(s);\\
+					r_1(s)=\psi_3(s)\circledast r_2(s)+r_3(s),\quad \deg r_3(s)<\deg r_2(s);\\
+					r_{i-1}(s)=\psi_{i+1}(s)\circledast r_i(s)+r_{i+1}(s),\quad \deg r_{i+1}(s)<\deg r_i(s),\: i=2,3,\cdots , n-1;\\
+					r_{n-2}(s)=\psi_n(s)\circledast r_{n-1}(s)+r_n(s),\quad \deg r_n(s)<\deg r_{n-1}(s);\\
+					r_{n-1}(s)=\psi_{n+1}(s)\circledast r_n(s).
+				\end{cases}
+			\end{equation}
+			It can be assumed that one eventually obtains a remainder of zero, because the sequence of the degrees of the remainders monotonically decreases. it follows from the last item in \eqref{cases 6} that $r_n(s)|_{\circledast r}r_{n-1}(s).$ Combining this with the last second item in \eqref{cases 6} gives $r_n(s)|_{\circledast r}r_{n-2}(s).$ Along this line, it follows from \eqref{cases 6} that $r_n(s)|_{\circledast r}r_{n-2}(s),r_n(s)|_{\circledast r}r_{n-3}(s),\cdots, r_n(s)|_{\circledast r}g(s), r_n(s)|_{\circledast r}f(s).$ Hence, $r_n(s)$ is a common right divisor of $f(s)$ and $g(s)$.\\
+			\indent Now it is assumed that $\varphi(s)\in \mathbb{C}[s]$ is an arbitrary common right divisor of $f(s)$ and $g(s)$. This, together with the first expression in \eqref{cases 6}, implies that $\varphi(s)|_{\circledast r}r_1(s).$ Combining this fact with the second expression of \eqref{cases 6} gives that $\varphi (s)|_{\circledast r}r_2(s).$ Along this line, it follows from \eqref{cases 6} that $\varphi|_{\circledast r}r_n(s).$ This fact reveals that $r_n(s)$ is a greatest a common right divisor of $f(s)$ and $g(s).$\\
+			\indent The case of greatest common left divisor can be similarly proven. 
+		\end{proof}
+	\end{theorem}
+	\hyperref[theorem 4]{Theorem 4} not only shows the existence of greatest common right (left)  divisors, but also provides a method to find them. Such a method is reffered to as the Euclidean alogorithm.\\ 
+	\indent It follows from the preceding section that if $d(s)$ is a greatest common right (left) divisor of $f(s)$ and $g(s)$, then for any $a\in \mathbb{C},a\circledast d(s)\: (d(s)\circledast a)$ is one of their greatest common right (left) divisors. Therefore, one can require the greatest common right (left) divisor to be monic, then it is unique. For $f(s),g(s)\in \mathbb{C}[s],$ we use $\mathrm{gcrd}(f(s), g(s))$ and $\mathrm{gcld} (f(s),g(s))$ to denote the monic greatest common right and left divisor, respectively. In the following, some properties will be given.
+	\begin{theorem}
+		Given $f(s)$ and $g(s)$ with $\mathrm{gcrd}(f(s),g(s))= d(s)$, let $a(s)$ and $b(s)$ be the \mbox{polynomials} such that $f(s)=a(s)\circledast d(x),g(x)=b(s)\circledast d(s).$ Then,
+		\[\mathrm{gcrd}(a(s),b(s))=1.\]
+		\begin{proof}
+			Assume that $c(x)$ is a polynomial such that $c(s)|_{\circledast r}a(s),c(s)|_{\circledast r}b(s)$. Then there are polynomials $k(s)$ and $l(x)$ such that $a(s)=k(s)\circledast c(s)$ and $b(s)=l(s)\circledast c(s),$ so that $f(s)=(k(s)\circledast c(s))\circledast d(x)$ and $g(s)=(l(s)\circledast c(s))\circledast d(s)$. Hence, $c(s)\circledast d(s)$ is a common right divisor of $f(s)$ and $g(s)$. Since $d(s)$ is a greatest common right divisor, $c(s)$ must be a constant. Consequently, $\mathrm{gcrd}(a(s),b(s))=1.$
+			\end{proof}
+	\end{theorem}
+	Similarly, the following conclusion on the greatest common left divisors can be obtained.
+	\begin{theorem}
+		Given $f(s)$ and $g(s)$ with $\mathrm{gcld}(f(s),g(s))=d(s),$ let $a(s)$ and $b(s)$ be polynomials such that $f(s)=d(x)\circledast a(s),g(s)=d(s)\circledast b(s).$ Then,
+		\[\mathrm{gcld}(a(s),b(s))=1.\]
+	\end{theorem}
+	\begin{theorem}
+		Let $f(s),g(s)$ and $c(s)$ be polynomials on $\mathbb{C}[s].$ Then
+		\begin{enumerate}[(1)]
+			\normalfont
+			\item $\mathrm{gcrd}(f(s)+c(s)\circledast g(s),g(s))=\mathrm{gcrd}(f(s),g(s));$
+			\item $\mathrm{gcld}(f(s)+g(s)\circledast c(s),g(s))=\mathrm{gcld}(f(s),g(s)).$
+		\end{enumerate}
+		\begin{proof}
+			Let $d(s)\in \mathbb{C}[s]$ be a common right divisor of $f(s)$ and $g(s)$. It follows from \hyperref[theorem 2]{theorem 2} that $d(s)|_{\circledast r}(f(s)+c(s)\circledast g(s)).$ Hence, $d(s)$ is a common right divisor of $f(s)+c(s)\circledast g(s)$ and $g(s)$. In addition, if $e(s)$ is a polynomial in $\mathbb{C}(s)$ such that $e(s)|_{\circledast r}(f(s)+c(s)\circledast g(s)),e(s)|_{\circledast r}g(s),$ then if follows from \hyperref[theorem 2]{theorem 2} that $e(s)|_{\circledast r}[(f(s)+c(s)\circledast g(s))-c(s)\circledast g(s)],$ thus $e(s)|_{\circledast r}f(s).$ Hence, $e(s)$ is a common right divisor of $f(s)$ and $g(s).$ The preceding two facts implies that the first conclusion. The second conclusion can be similarly proven. 
+		\end{proof}
+	\end{theorem}
+	\begin{theorem}
+		Let $f(s),g(s)\in \mathbb{C}[s].$ Then, for any $m(s),n(s)\in \mathbb{C}[s],$
+		\begin{enumerate}[(1)]
+			\normalfont
+			\item $\mathrm{gcrd}(f(s),g(s))|_{\circledast r}(m(s)\circledast f(s)+n(s)\circledast g(s));$
+			\item $\mathrm{gcld}(f(s),g(s))|_{\circledast l}(f(s)\circledast m(s)+g(s)\circledast n(s)).$
+		\end{enumerate}
+		\begin{proof}
+			The conclusion is a simple corollary of \hyperref[theorem 2]{theorem 2}, and the proof is omitted.
+		\end{proof}
+	\end{theorem}
+	Greatest common divisors can be defined for more than two polynomials.
+	\begin{definition}
+		\normalfont
+		Let $f_i(s)\in \mathbb{C}[s],i=1,2,\cdots, n,$ not all 0.
+		\begin{enumerate}[(1)]
+			\normalfont
+			\item If there exists a polynomial $g_r(s)$ such that $g_r(s)|_{\circledast r}f_i(s),i=1,2,\cdots, n,$ then $g_r(s)$ is called a common right divisor of $f_i(s),i=1,2,\cdots, n;$ If $g_{r1}(s)$ is any other common right divisor of $f_i(s),i=1,2,\cdots, n,$ and $g_{r1}|_{\circledast r}g_r(s)$, then $g_r(s)$ is a greatest common right divisor of $f_i(s),i=1,2,\cdots, n.$
+			\item If there exists a polynomial $g_l(s)$ such that $g_l(s)|_{\circledast l}f_i(s),i=1,2,\cdots, n,$ then $g_l(s)$ is called a common left divisor of $f_i(s),i=1,2,\cdots, n;$ If $g_{l1}(s)$ is any other common left divisor of $f_i(s),i=1,2,\cdots, n,$ and $g_{l1}|_{\circledast r}g_l(s)$, then $g_l(s)$ is a greatest common left divisor of $f_i(s),i=1,2,\cdots, n.$
+		\end{enumerate}
+	\end{definition}
+	We use $\mathrm{gcrd}(f_1(x),f_2(x),\cdots, f_n(s))$ and \(\mathrm{gcld}(f_1(x),f_2(x),\cdots, f_n(s))\) to denote the monic greatest common right and left divisors of $f_i(s),i=1,2,\cdots, n,$ respectively.
+	\begin{lemma}
+		Let $f_i(s)\in \mathbb{C}[s],i=1,2,\cdots, n,$ not all $0$. then,
+		\begin{enumerate}[(1)]
+			\normalfont
+			\item $\mathrm{gcrd}(f_1(x),f_2(x),\cdots, f_n(s))=\mathrm{gcrd}(f_1(x),f_2(x),\cdots, \mathrm{gcrd}(f_{n-1}(s),f_n(s)));$
+			\item $\mathrm{gcld}(f_1(x),f_2(x),\cdots, f_n(s))=\mathrm{gcld}(f_1(x),f_2(x),\cdots, \mathrm{gcld}(f_{n-1}(s),f_n(s))).$
+		\end{enumerate}
+		\begin{proof}
+			Any common right divisor of the n polynomials $f_i(s),i=1,2,\cdots, n$ is, in particular, a right divisor of $f_{n-1}(s)$ and $f_n(s),$ and therefore a right divisor of $\mathrm{gcrd}(f_{n-1}(s),f_n(s)).$ Also, any common right divisor of the $n-1$ polynomials $f_1(x),f_2(x),\cdots, f_{n-2}(s)$ and $\mathrm{gcrd}(f_{n-1}(s),f_n(s))$ must be a common right divisor of n polynomials $f_i(s),i=1,2,\cdots, n,$ for it is a right divisor of $\mathrm{gcrd}(f_{n-1}(s),f_n(s)),$ it must be right divisors of $f_{n-1}(s)$ and $f_n(s)$. Since the set of n polynomials and the set of the first $n-2$ polynomials together with the monic greatest common right divisor of the last two polynomials have exactly the same divisors, their monic greatest common right divisors are equal. the first conclusion is thus obtained. The second conclusion can be derived along the same line. 
+		\end{proof}
+	\end{lemma}
+	\subsection{Coprimeness in $(\mathbb{C}[s],+,\circledast)$}
+	\begin{definition}
+		\normalfont
+		Two polynomials $f(s),g(s)\in \mathbb{C}[s]$ are said to be right (left) coprime if $f(s)$ and $g(s)$ have greatest common right (left) divisors with degree $0$.
+	\end{definition}
+	Obviously, $f(s)$ and $g(s)$ is right coprime if and only if $\mathrm{gcrd}(f(s),g(s))=1; f(s)$ and $g(s)$ is left coprime if and only if $\mathrm{gcld}(f(s),g(s))=1$.\\
+	\indent In order to obtain some criteria of coprimeness, we firstly give a conclusion on greatest common right (left) divisors.
+	\begin{theorem}
+		Given $f(s),g(s)\in \mathbb{C}[s],$ let $d(s)$ be a greatest common right divisor of $f(s)$ and $g(s).$ Then, there exist $\alpha(s),\beta(s)\in \mathbb{C}[s]$ such that
+		\begin{equation}\label{eq 7}
+			\alpha(s)\circledast f(s)+ \beta(s)\circledast g(s)=d(s).
+		\end{equation}
+		\begin{proof}
+			It follows from \hyperref[theorem 4]{Theorem 4} that $d(s)$ is the $r_n(s)$ in \eqref{cases 6} $i.e.,d(s)=r_n(s).$ Denote $\alpha_1(s)=1,\beta_(s)=-\psi_n(s).$ Then, it follows from the last second relation in \eqref{cases 6} that
+			\[d(s)=\alpha_1(s)\circledast r_{n-2}(s)+\beta_1(s)\circledast r_{n-1}(s).\]
+			Substituting the last third relation into the preceding expression, gives that 
+			\[d(s)=\alpha_2(s)\circledast r_{n-3}(s)+\beta_2(s)\circledast r_{n-2}(s).\]
+			with $\alpha_2(s)=\beta_1(s),\beta_2(s)=\alpha_1(s)-\beta_1(s)\circledast \psi_{n-1}(s).$ By successively aplying such a procedure, one can obtain \eqref{eq 7}
+		\end{proof}
+	\end{theorem}
+	Similarly, on greatest common left divisors one can obtain the following theorem.
+	\begin{theorem}
+		Given $f(s),g(s)\in \mathbb{C}[s]$, let $d(s)$ be a greatest common left divisor of $f(s)$ and $g(s)$. Then, there exist $\alpha(s),\beta(s)\in \mathbb{C}[s]$ such that
+		\[f(s)\circledast \alpha(s)+g(s)\circledast \beta(s)=d(s).\]
+	\end{theorem}
+	With the preceding two results, we obtain the following result on coprimeness of two polynomials.
+	\begin{theorem}
+		Let $f(s),g(s)\in \mathbb{C}[s].$
+		\begin{enumerate}[\normalfont(1)]
+			\item $f(s)$ and $g(s)$ is right coprime if and only if there exist $\alpha(s),\beta(s)\in \mathbb{C}[s]$ such that
+			\[\alpha(s)\circledast f(s)+\beta(s)\circledast g(s)=1.\]
+			\item $f(s)$ and $g(s)$ is left coprime if and only if there exist $\alpha(s),\beta(s)\in \mathbb{C}[s]$ such that
+			\[f(s)\circledast \alpha(s)+g(s)\circledast \beta(s)=1.\]
+		\end{enumerate}
+	\end{theorem}
+	\begin{remark}
+		\normalfont
+		In the ordinary polynomial product, it is well known that corimeness of two polynomials can be checked by the so-called Sylvester resultant matrix. However, since the conjugate product does not obey commutativity law, such a resultant matrix does not exist for coprimeness in the framework of conjugate product.
+	\end{remark}
+	\section{Conclusions}
+	In this paper, some concepts in the framework of ordinary product for complex polynomials have been generalized to the framework of the conjugate product. These concepts include greatest common divisors, coprimeness, divisibility. The so-called Euclidean algorithm is also established to obtain a greatest common divisor for two complex polynomials. A necessary and sufficient condition is also proposed to check the coprimeness. It can seen in this paper that the conjugate product possesses many interesting properties similar to the ordinary polynomial product. However, it is obvious that the conjugate product does not obey the commutativity law. Such a feature implies that the conjugate product has more abundant properties. In our future work, we will further investigate some topics related to the conjugate product. 
+	\section*{ Acknowledgements}
+	This work was partially supported by the National Natural Science Foundation of China under Grant No. 60974044, by a Grant from the Research Grants Council of The Hong Kong Special Administrative Region under project CityU 113708, by the Fundamental Research Funds for the Central Universities under Grant No. HIT.NSRIF.2009137,the Natural Science Foundation of Guangdong Province under Grant No. $1045\,1805707004154$, and Basic Research Plan in Shenzhen City under Grant No. JC200903120195A. 
+	\begin{thebibliography}{9}
+		{\footnotesize
+		\bibitem{1} A.G. Wu, G. Feng,  W. Liu, \& G.R. Duan, The complete solution to the Sylvester-polynomial-conjugate matrix equations. Mathematical and Computer Modelling (2011) \href{https://doi.org/10.1016/j.mcm.2010.12.038}{doi:10.1016/j.mcm.2010.12.038.}
+		\bibitem{2} T. Kailath, Linear systems, Prentice-Hall, (1980).
+		\bibitem{3} C.T. Chen, Linear System Theory and Design, Oxford University Press, 1998.}
+	\end{thebibliography}
+	
+\end{document}

@@ -1,0 +1,13 @@
+\frametitle{\textbf {\textit {Biểu tượng thực tế}}}
+\begin{block}{Khai báo:}
+			\verb|Môi trường usepackage{marvosym}|
+		\end{block}
+		\pause
+		\begin{exampleblock}{Ví dụ: }
+			\Telefon: \verb|\Telefon|, \Letter: \verb|\Letter|, \EUR: \verb|\EUR|, \Lightning: \verb|\Lightning|
+		\end{exampleblock}
+		\pause
+		\begin{block}{Mục đích:}
+			Cung cấp các biểu tượng mang tính thực tế.\\
+			Khác với pifont (thiên về kí hiệu), marvosym có icon như: điện thoại, email, tiền tệ, cảnh báo
+		\end{block}
