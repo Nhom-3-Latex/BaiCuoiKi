@@ -17,6 +17,12 @@
 		\hfill%
 	}%
 }
+%biểu tượng icon
+\usepackage{pifont}
+%icon hiện đại
+\usepackage{fontawesome}
+% biểu tượng thực tế 
+\usepackage{marvosym}
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -136,5 +142,132 @@
 				hung & hung
 			\end{tabular}
 		\end{table}
+	\end{frame}
+	%--------------------------------------------------------------------------
+	
+	
+	%phần của Trần Hoài Nam 	
+	\begin{frame}{\textbf{\textit{Mục 3}}}
+		\centering
+		\Huge
+		\textcolor{blue!60}{\textbf{Chèn các biểu tượng hình ảnh trong \LaTeX}}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Ký hiệu toán học}}}%fragile cho phép sử dụng verb trong beamer
+		\begin{block}{Khai báo:}
+			\verb|Môi trường \usepackage{amssymb}|
+		\end{block}
+		\pause
+		\begin{block}{Một vài kí tự toán học:}
+			\begin{table}
+				\begin{tabular}{|c|l|}
+					\hline
+					Ký hiệu & Công thức\\
+					\hline
+					$\checkmark$ & \verb|\checkmark|\\
+					\hline
+					$\times$ & \verb|\times|\\
+					\hline
+					$\star$ & \verb|\star|\\
+					\hline
+					$\dagger$ & \verb|\dagger|\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
+		\pause
+		\begin{alertblock}{Lưu ý:}
+			Các kí hiệu toán học phải được đặt trong math mode (chế độ toán) như là \verb|$...$, \(...\), \[...\],...|
+		\end{alertblock}
+		\pause
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng dạng icon}}}
+		\begin{block}{Khai báo:}
+			\verb|Môi trường \usepackage{pifont}|
+		\end{block}
+		\pause
+		\begin{block}{Cách dùng:}
+			\verb|\ding{<số>}|
+		\end{block}
+		\pause
+		\begin{exampleblock}{Ví dụ:}
+			\ding{51}: \verb|\ding{51}|, \ding{55}: \verb|\ding{55}|, \ding{60}: \verb|\ding{60}|,...
+		\end{exampleblock}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Icon hiện đại}}}
+		\begin{block}{Khai báo:}
+			\verb|Môi trường \usepackage{fontawesome}|
+		\end{block}
+		\pause
+		\begin{block}{Một số icon hiện đại:}
+			\pause
+			\begin{table}
+				\begin{tabular}{|c|l|}
+					\hline
+					Icon & Công thức\\
+					\hline
+					\faHeart & \verb|\faHeart|\\
+					\hline
+					\faStar & \verb|\faStar|\\
+					\hline
+					\faUser & \verb|\faUser|\\
+					\hline
+					\faEnvelope & \verb|\faEnvelope|\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng thực tế}}}
+		\begin{block}{Khai báo:}
+			\verb|Môi trường usepackage{marvosym}|
+		\end{block}
+		\pause
+		\begin{exampleblock}{Ví dụ: }
+			\Telefon: \verb|\Telefon|, \Letter: \verb|\Letter|, \EUR: \verb|\EUR|, \Lightning: \verb|\Lightning| 
+		\end{exampleblock}
+		\pause
+		\begin{block}{Mục đích:}
+			Cung cấp các biểu tượng mang tính thực tế.\\
+			Khác với pifont (thiên về kí hiệu), marvosym có icon như: điện thoại, email, tiền tệ, cảnh báo 
+		\end{block}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Ví dụ tổng hợp}}}
+		\begin{figure}[h]
+			\centering
+			\begin{minipage}{0.45\linewidth}
+				\includegraphics[width=0.7\linewidth]{ky_hieu_toan_hoc/khth.png}
+			\end{minipage}
+			\begin{minipage}{0.45\linewidth}
+				\includegraphics[width=\linewidth]{ky_hieu_toan_hoc/result.png}
+			\end{minipage}
+			\caption{Ví dụ minh họa }
+		\end{figure}
+		\pause
+		\begin{block}{Nhận xét:}
+			Kết hợp nhiều package để tạo nhiều loại biểu tượng khác nhau.
+		\end{block}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
+		\pause
+		\begin{columns}
+			\column{0.45\textwidth}
+			\begin{block}{Ưu điểm:}
+				\begin{itemize}
+					\item Không cần file ảnh 
+					\item Dễ sử dụng 
+					\item Nhẹ, chạy nhanh
+					\item Có thể chèn trực tiếp trong văn bản. 
+				\end{itemize}
+			\end{block}
+			\pause
+			\column{0.45\textwidth}
+			\begin{alertblock}{Nhược điểm:}
+				\begin{itemize}
+					\item Không đa dạng bằng hình ảnh thật
+					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
+				\end{itemize}
+			\end{alertblock}
+		\end{columns}
+		
 	\end{frame}
 \end{document}
