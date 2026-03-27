@@ -1,58 +1,140 @@
 \documentclass[11pt]{beamer}
 \usepackage[utf8]{vietnam}
+%\usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usetheme{Madrid}
+\usetheme{CambridgeUs}
+%Làm chữ Bảng đen và hiện Bảng 1
+\setbeamercolor{caption name}{fg=black}
+\setbeamertemplate{caption}[numbered]
+%các gói khai báo tô bảng màu và chỉnh độ rộng cột , hàng
+\usepackage{array}
+\usepackage[table]{xcolor}
+% Chỉnh logo góc trái trên mọi slide
+\setbeamertemplate{headline}{%
+	\leavevmode%đảm bảo LaTeX đang ở horizontal mode (xếp các vật thể theo hàng ngang, từ trái sang phải.)
+	\hbox{%tạo một “hộp ngang”, mọi thứ bên trong xếp theo hàng ngang, không bị xuống dòng.
+		\includegraphics[height=0.7cm,width=1.5cm]{logo_tdtu/TĐT_logo.png}%
+		\hfill%
+	}%
+}
 \begin{document}
-    \author{Nguyễn Hữu Cần}
-    \title{Báo cáo kết thúc môn}
-    \subtitle{Tiêu đề con}
-    %\logo{}
-    \institute{Khoa Toán - Thống kê}
-    \date{24.03.2026}
-    \subject{ABC}
-    %\setbeamercovered{transparent}
-    %\setbeamertemplate{navigation symbols}{}
-    \begin{frame}%[plain] slide thông tin plain
-       	\maketitle
-    \end{frame}
-    
-    \begin{frame}{Tiêu đề của slide 1}
-    	Một số ký tự phải thêm \textbackslash\ phía trước:
-       \begin{table}
-       	\begin{tabular}{|c|c|}
-       		\hline
-       		Ky tu & Cach viet trong \LaTeX\\
-       		\hline
-       		\# & \textbackslash\#\\
-       		\hline
-       		\$ & \textbackslash\$\\
-       		\hline
-       		\% & \textbackslash\%\\
-       		\hline
-       		\& & \textbackslash\&\\
-       		\hline
-       		\_ & \textbackslash\_\\
-       		\hline
-       		\{\} & \textbackslash\{ \textbackslash\}\\
-       		\hline
-       		\^{}&\textbackslash\
-       		\textasciicircum\{ \}\\
-       		\hline
-       		\~{}&\textbackslash\ \~{} \{ \}\\
-       		\hline
-       		\textbackslash\ & \texttt{\textbackslash textbackslash}\\
-       		\hline
-       	\end{tabular}
-       \end{table}
-    \end{frame}
-    
-    
-    \begin{frame}{Tiêu đề của slide 2}
-       	Nội dung cần nhấn mạnh
-       	
-       	\begin{block}{Tiêu đề block}
-       		Nội dung của block
-       	\end{block}
-       	
-    \end{frame}
+	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
+	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
+	\subtitle{\textbf{\textit{Chủ đề: Chèn các kí hiệu trong \LaTeX}}}
+	\institute[Toán-thống kê]{\large{\textbf{\underline{Toán-thống kê}}\\[1em]
+			\textbf{\underline{Đại học Tôn Đức Thắng}}}}
+	
+	\date[Ngày báo cáo: 31.03.2026]{\textbf{\textit{\underline{Ngày báo cáo: 31.03.2026}}}}
+	%\logo{\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}%[plain]plain là Slide sẽ không có header, footer, thanh tiêu đề…
+		\maketitle
+		\centering
+		%\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}
+	\end{frame}
+	
+	\begin{frame}{\textbf{\textit{Phân công công việc}}}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}{\textbf{MSSV}} &\color{white}{\textbf{Họ tên}} &\color{white}{\textbf{Nhiệm vụ}} &\color{white}{\textbf{Tỉ lệ}} & \color{white}{\textbf{Chữ kí}}\\
+				\hline
+				C2500061 & Trần Hoài Nam & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500174 & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500055 & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500010 & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+				C2500049 & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
+				\hline
+			\end{tabular}
+			\caption{Phân công nhiệm vụ}
+		\end{table}
+	\end{frame}
+	\begin{frame}{\textbf{\textit{Tóm tắt}}}
+		\begin{block}{\textbf{Các mục chính}}
+			\begin{itemize}
+				\pause
+				\item Ký tự Hy Lạp, các hàm toán học trong \LaTeX
+				\pause
+				\item Ký tự đặc biệt trong \LaTeX
+				\pause
+				\item Các biểu tượng hình ảnh có sẵn trong \LaTeX
+			\end{itemize}
+		\end{block}
+	\end{frame}
+    \begin{frame}{\textbf{Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
+    	\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ky tu} & \color{white}\textbf{Cach viet trong} \textbf{\LaTeX}\\
+				\hline
+				\# & \textbackslash\#\\
+				\hline
+				\$ & \textbackslash\$\\
+				\hline
+				\% & \textbackslash\%\\
+				\hline
+				\& & \textbackslash\&\\
+				\hline
+				\_ & \textbackslash\_\\
+				\hline
+				\{\} & \textbackslash\{ \textbackslash\}\\
+				\hline
+				\^{}&\textbackslash\textasciicircum\{ \}\\
+				\hline
+				\~{}&\textbackslash\~{}\{ \}\\
+				\hline
+				\textbackslash\ & \texttt{\textbackslash textbackslash}\\
+				\hline
+			\end{tabular}
+		\end{table}
+		\textit{\textbf{Ví dụ:} Giá tiền là \textbf{\texttt{\textbackslash\$100}} và giảm \textbf{\texttt{20\textbackslash\%}}} $\to$ Giá tiền là \textbf{\$100} và giảm \textbf{20\%.}
+	\end{frame}
+	\begin{frame}{\textbf{Dùng lệnh có sẵn (symbols)}}
+		\textbf{Các kí hiệu phổ biến:}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Kí hiệu} &\color{white}\textbf{Cách viết trong \LaTeX}\\
+				\hline
+				\copyright & \texttt{\textbackslash copyright}\\
+				\hline
+				\textregistered & \texttt{\textbackslash textregistered}\\
+				\hline
+				\textdegree & \texttt{\textbackslash textdegree}\\
+				\hline
+				\dag & \texttt{\textbackslash dag}\\
+				\hline
+				\ddag & \texttt{\textbackslash ddag}\\
+				\hline
+				$\alpha, \beta, \gamma$ & \texttt{\textbackslash alpha}, \texttt{\textbackslash beta}, \texttt{\textbackslash gamma}\\
+				\hline
+				$\infty$ & \texttt{\textbackslash infty}\\
+				\hline
+				$\sum$ & \texttt{\textbackslash sum}\\
+				\hline
+				$\int$ & \texttt{\textbackslash int}\\
+				\hline
+				$\leq, \geq$ & \texttt{\textbackslash leq},\texttt{\textbackslash geq}\\
+				\hline
+			\end{tabular}
+		\end{table}
+		\textbf{Ví dụ:} \textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
+	\end{frame}
+	\begin{frame}{\textbf{Dùng gói mở rộng}}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|}
+				hung & hung
+			\end{tabular}
+		\end{table}
+	\end{frame}
 \end{document}
