@@ -2,7 +2,12 @@
 \usepackage[utf8]{vietnam}
 %\usepackage[T1]{fontenc}
 \usepackage{lmodern}
+% \usepackage{verbatim}
 \usetheme{CambridgeUs}
+\usepackage{makecell}
+
+% Change Color
+% \usecolortheme{dolphin}
 %Làm chữ Bảng đen và hiện Bảng 1
 \setbeamercolor{caption name}{fg=black}
 \setbeamertemplate{caption}[numbered]
@@ -74,6 +79,70 @@
 			\end{itemize}
 		\end{block}
 	\end{frame}
+
+	% Phần của Trương Cảnh Chân
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Cách chèn ký tự toán học}
+		\begin{block}{\textbf{Có 3 cách để chèn: }}
+			\begin{itemize}
+				\pause
+				\item Viết toán học ở trong \$\$
+				\pause
+				\item Viết toán học ở trong \texttt{\textbackslash(\textbackslash)} hoặc \texttt{\textbackslash[\textbackslash]}
+				\pause
+				\item Viết toán học ở trong lệnh \texttt{\textbackslash begin\{equation\}}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\textbf{Sự khác biệt}
+		\begin{table}[h]
+			\begin{tabular}{|c|l|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Sử dụng khi}\\
+				\hline
+				\makecell[l]{\$\$\\\texttt{\textbackslash(\textbackslash)}} & \makecell[l]{Dùng khi công thức nằm trong một câu văn\\Không xuống dòng, không đánh số}\\
+				\hline
+				\makecell[l]{\texttt{\textbackslash[\textbackslash]}} & \makecell[l]{Công thức được tách riêng ra 1 dòng\\Không có số thứ tự}\\
+				\hline
+				\makecell[l]{\texttt{\textbackslash begin\{equation\}}} & \makecell[l]{Giống \texttt{\textbackslash[\textbackslash]}\\Có số thứ tự}\\
+				\hline
+			\end{tabular}
+		\end{table}
+
+	\end{frame}
+
+	\begin{frame}
+		\textbf{Ví dụ}
+		\begin{block}{\textbf{Code:}}
+			\$1 + 1 = 2\$ {\color{blue} \% Sử dụng \$}\\
+			\texttt{\textbackslash(2 + 2 = 4\textbackslash)} {\color{blue} Sử dụng  \texttt{\textbackslash(\textbackslash)}}
+		\end{block}
+
+		\begin{block}{\textbf{PDF: }}
+			$1 + 1 = 2$\\
+			\(1 + 1 = 2\)
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\textbf{Ví dụ}
+		\begin{block}{\textbf{Code:}}
+			\texttt{\textbackslash[1 + 1 = 2\textbackslash]} {\color{blue} Sử dụng  \texttt{\textbackslash[\textbackslash]}}\\
+			\texttt{\textbackslash begin\{equation\}\\ \hspace{1cm}2 + 2 = 4 \\\textbackslash end\{equation\}} {\color{blue} Sử dụng \texttt{\textbackslash begin\{equation\}}}\\
+		\end{block}
+
+		\begin{block}{\textbf{PDF: }}
+			\[3 + 3 = 6\]
+			\begin{equation}
+				2 + 2 = 4
+			\end{equation}
+		\end{block}
+	\end{frame}
+	%--------------------------------------------------------------------------
+
     \begin{frame}{\textbf{Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
     	\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}
 		\begin{table}[h]
