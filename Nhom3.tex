@@ -23,6 +23,8 @@
 \usepackage{fontawesome}
 % biểu tượng thực tế 
 \usepackage{marvosym}
+\usepackage{multirow}
+\usepackage{multicol}
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -137,12 +139,40 @@
 		\textbf{Ví dụ:} \textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
 	\end{frame}
 	\begin{frame}{\textbf{Dùng gói mở rộng}}
+		\textbf{Một số kí tự cần có package:}
 		\begin{table}[h]
 			\begin{tabular}{|c|c|}
-				hung & hung
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Môi trường} & \color{white}\textbf{Kí tự cần} \\
+				\hline
+				\multirow{2}{*}{\texttt{\textbackslash usepackage\{textcomp\}}} & \texttt{\textbackslash textdegree} \\
+				\cline{2-2}
+				& \texttt{\textbackslash textcent} \\
+				\hline
+				\multirow{2}{*}{\texttt{\textbackslash usepackage\{amssymb\}}} &
+				\texttt{\textbackslash mathbb\{R\}} \\
+				\cline{2-2}
+				& \texttt{\textbackslash mathbb\{Z\}} \\
+				\hline
 			\end{tabular}
 		\end{table}
 	\end{frame}
+	\newpage
+	\begin{verbatim}
+		\documentclass{article}
+		\usepackage{amssymb}
+		\usepackage{textcomp}
+		\usepackage{marvosym}
+		\begin{document}
+			Giá: \$50 \\
+			Phần trăm: 20\% \\
+			Ký hiệu: \# \& \_ \\
+			Toán học: $\alpha + \beta = \gamma$ \\
+			Nhiệt độ: 30\textdegree C \\
+			Biểu tượng: \Smiley \Telefon
+		\end{document}
+	\end{verbatim}
 	%--------------------------------------------------------------------------
 	
 	
