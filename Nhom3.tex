@@ -5,6 +5,7 @@
 % \usepackage{verbatim}
 \usetheme{CambridgeUs}
 \usepackage{makecell}
+\usepackage{caption}
 
 % Change Color
 % \usecolortheme{dolphin}
@@ -99,7 +100,7 @@
 		\end{block}
 	\end{frame}
 
-	\begin{frame}
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Sự khác biệt}
 		\begin{table}[h]
 			\begin{tabular}{|c|l|}
@@ -118,7 +119,7 @@
 
 	\end{frame}
 
-	\begin{frame}
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{\textbf{Code:}}
 			\$1 + 1 = 2\$ {\color{blue} \% Sử dụng \$}\\
@@ -131,7 +132,7 @@
 		\end{block}
 	\end{frame}
 
-	\begin{frame}
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{\textbf{Code:}}
 			\texttt{\textbackslash[1 + 1 = 2\textbackslash]} {\color{blue} Sử dụng  \texttt{\textbackslash[\textbackslash]}}\\
@@ -143,6 +144,84 @@
 			\begin{equation}
 				2 + 2 = 4
 			\end{equation}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{\large Cách rõ ký tự hy lạp trong toán học}
+		\begin{figure}[h]
+			\centering
+			\begin{minipage}{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{assets/KyTuHyLapVaCacHamToanHoc/bangChuCaiHyLap.jpg}
+			\end{minipage}
+			\caption*{Bảng chữ cái hy lạp}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\begin{block}{Cách viết chữ Hy Lạp}
+			\begin{itemize}
+				\pause
+				\item Các chữ được viết ở chế độ toán học
+				\pause
+				\item Các chữ Hy Lạp phải bắt đầu bởi dấu \textbackslash \textit{*Tên Chữ}
+				% \pause
+				% \item Chúng ta có thể viết hoa chữ bằng cách viết hoa chữ đầu tiên
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Ví dụ}
+		\begin{block}{\textbf{Code}}
+			\verb*|$\alpha$|\\ 
+			\verb*|$\beta$|\\
+			\verb*|$\gamma$|
+		\end{block}
+
+		\begin{block}{\textbf{PDF}}
+			$\alpha$\\
+			$\beta$\\
+			$\gamma$
+		\end{block}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Bảng chữ cái hy lạp}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết} & \color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết}\\
+				\hline
+				$\alpha$ & \verb*|\alpha| & $\beta$ & \verb*|\beta|\\
+				$\gamma$ & \verb*|\gamma| & $\delta$ & \verb*|\delta|\\
+				$\epsilon$ & \verb*|\epsilon| & $\zeta$ & \verb*|\zeta|\\
+				$\eta$ & \verb*|\eta| & $\theta$ & \verb*|\theta|\\
+				$\iota$ & \verb*|\iota| & $\kappa$ & \verb*|\kappa|\\
+				$\lambda$ & \verb*|\lambda| & $\mu$ & \verb*|\mu|\\
+				$\nu$ & \verb*|\nu| & $\xi$ & \verb*|\xi|\\
+				o & o & $\pi$ & \verb*|\pi|\\
+				$\rho$ & \verb*|\rho| & $\sigma$ & \verb*|\sigma|\\
+				$\tau$ & \verb*|\tau| & $\upsilon$ & \verb*|\upsilon|\\
+				$\phi$ & \verb*|\phi| & $\chi$ & \verb*|\chi|\\
+				$\psi$ & \verb*|\psi| & $\omega$ & \verb*|\omega|\\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Viết Hoa Chữ Hy Lạp}
+		\begin{block}{\textbf{Code}}
+			\verb*|$\delta$| {\color{green} \% => $\delta$}\\
+			\verb*|$\Delta$| {\color{green} \% => $\Delta$}\\
+			{\color{green} \% - - - - - - - - - - - - -}\\
+			\verb*|$\sigma$| {\color{green} \% => $\sigma$}\\
+			\verb*|$\Sigma$| {\color{green} \% => $\Sigma$}\\
+			{\color{green} \% - - - - - - - - - - - - -}\\
+			\verb*|$\omege$| {\color{green} \% => $\epsilon$}\\
+			\verb*|$\Omega$| {\color{green} \% => $\Omega$}
 		\end{block}
 	\end{frame}
 	%--------------------------------------------------------------------------
