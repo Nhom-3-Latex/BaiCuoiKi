@@ -2,7 +2,13 @@
 \usepackage[utf8]{vietnam}
 %\usepackage[T1]{fontenc}
 \usepackage{lmodern}
+% \usepackage{verbatim}
 \usetheme{CambridgeUs}
+\usepackage{makecell}
+\usepackage{caption}
+
+% Change Color
+% \usecolortheme{dolphin}
 %Làm chữ Bảng đen và hiện Bảng 1
 \setbeamercolor{caption name}{fg=black}
 \setbeamertemplate{caption}[numbered]
@@ -13,7 +19,7 @@
 \setbeamertemplate{headline}{%
 	\leavevmode%đảm bảo LaTeX đang ở horizontal mode (xếp các vật thể theo hàng ngang, từ trái sang phải.)
 	\hbox{%tạo một “hộp ngang”, mọi thứ bên trong xếp theo hàng ngang, không bị xuống dòng.
-		\includegraphics[height=0.7cm,width=1.5cm]{logo_tdtu/TĐT_logo.png}%
+		\includegraphics[height=0.7cm,width=1.5cm]{assets/logo_tdtu/TĐT_logo.png}%
 		\hfill%
 	}%
 }
@@ -78,14 +84,167 @@
 			\end{itemize}
 		\end{block}
 	\end{frame}
+
+	% Phần của Trương Cảnh Chân
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Cách chèn ký tự toán học}
+		\begin{block}{\textbf{Có 3 cách để chèn: }}
+			\begin{itemize}
+				\pause
+				\item Viết toán học ở trong \$\$
+				\pause
+				\item Viết toán học ở trong \texttt{\textbackslash(\textbackslash)} hoặc \texttt{\textbackslash[\textbackslash]}
+				\pause
+				\item Viết toán học ở trong lệnh \texttt{\textbackslash begin\{equation\}}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Sự khác biệt}
+		\begin{table}[h]
+			\begin{tabular}{|c|l|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Sử dụng khi}\\
+				\hline
+				\makecell[l]{\$\$\\\texttt{\textbackslash(\textbackslash)}} & \makecell[l]{Dùng khi công thức nằm trong một câu văn\\Không xuống dòng, không đánh số}\\
+				\hline
+				\makecell[l]{\texttt{\textbackslash[\textbackslash]}} & \makecell[l]{Công thức được tách riêng ra 1 dòng\\Không có số thứ tự}\\
+				\hline
+				\makecell[l]{\texttt{\textbackslash begin\{equation\}}} & \makecell[l]{Giống \texttt{\textbackslash[\textbackslash]}\\Có số thứ tự}\\
+				\hline
+			\end{tabular}
+		\end{table}
+
+	\end{frame}
+
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Ví dụ}
+		\begin{block}{\textbf{Code:}}
+			\$1 + 1 = 2\$ {\color{blue} \% Sử dụng \$}\\
+			\texttt{\textbackslash(2 + 2 = 4\textbackslash)} {\color{blue} Sử dụng  \texttt{\textbackslash(\textbackslash)}}
+		\end{block}
+
+		\begin{block}{\textbf{PDF: }}
+			$1 + 1 = 2$\\
+			\(1 + 1 = 2\)
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Ví dụ}
+		\begin{block}{\textbf{Code:}}
+			\texttt{\textbackslash[1 + 1 = 2\textbackslash]} {\color{blue} Sử dụng  \texttt{\textbackslash[\textbackslash]}}\\
+			\texttt{\textbackslash begin\{equation\}\\ \hspace{1cm}2 + 2 = 4 \\\textbackslash end\{equation\}} {\color{blue} Sử dụng \texttt{\textbackslash begin\{equation\}}}\\
+		\end{block}
+
+		\begin{block}{\textbf{PDF: }}
+			\[3 + 3 = 6\]
+			\begin{equation}
+				2 + 2 = 4
+			\end{equation}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{\large Cách rõ ký tự hy lạp trong toán học}
+		\begin{figure}[h]
+			\centering
+			\begin{minipage}{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{assets/KyTuHyLapVaCacHamToanHoc/bangChuCaiHyLap.jpg}
+			\end{minipage}
+			\caption*{Bảng chữ cái hy lạp}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\begin{block}{\textbf{Cách viết chữ Hy Lạp:}}
+			\begin{itemize}
+				\pause
+				\item Các chữ được viết ở chế độ toán học
+				\pause
+				\item Các chữ Hy Lạp phải bắt đầu bởi dấu \textbackslash \textit{*Tên Chữ}
+				% \pause
+				% \item Chúng ta có thể viết hoa chữ bằng cách viết hoa chữ đầu tiên
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Ví dụ:}
+		\begin{block}{\textbf{Code}}
+			\verb*|$\alpha$|\\ 
+			\verb*|$\beta$|\\
+			\verb*|$\gamma$|
+		\end{block}
+
+		\begin{block}{\textbf{PDF}}
+			$\alpha$\\
+			$\beta$\\
+			$\gamma$
+		\end{block}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Bảng chữ cái hy lạp}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết} & \color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết}\\
+				\hline
+				$\alpha$ & \verb*|\alpha| & $\beta$ & \verb*|\beta|\\
+				$\gamma$ & \verb*|\gamma| & $\delta$ & \verb*|\delta|\\
+				$\epsilon$ & \verb*|\epsilon| & $\zeta$ & \verb*|\zeta|\\
+				$\eta$ & \verb*|\eta| & $\theta$ & \verb*|\theta|\\
+				$\iota$ & \verb*|\iota| & $\kappa$ & \verb*|\kappa|\\
+				$\lambda$ & \verb*|\lambda| & $\mu$ & \verb*|\mu|\\
+				$\nu$ & \verb*|\nu| & $\xi$ & \verb*|\xi|\\
+				o & o & $\pi$ & \verb*|\pi|\\
+				$\rho$ & \verb*|\rho| & $\sigma$ & \verb*|\sigma|\\
+				$\tau$ & \verb*|\tau| & $\upsilon$ & \verb*|\upsilon|\\
+				$\phi$ & \verb*|\phi| & $\chi$ & \verb*|\chi|\\
+				$\psi$ & \verb*|\psi| & $\omega$ & \verb*|\omega|\\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{frame}
+
+	\begin{frame}[fragile]{\textbf{\textit{Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Viết Hoa Chữ Hy Lạp}
+		\begin{block}{\textbf{Code}}
+			\verb*|$\delta$| {\color{green} \% => $\delta$}\\
+			\verb*|$\Delta$| {\color{green} \% => $\Delta$}\\
+			{\color{green} \% - - - - - - - - - - - - -}\\
+			\verb*|$\sigma$| {\color{green} \% => $\sigma$}\\
+			\verb*|$\Sigma$| {\color{green} \% => $\Sigma$}\\
+			{\color{green} \% - - - - - - - - - - - - -}\\
+			\verb*|$\omege$| {\color{green} \% => $\epsilon$}\\
+			\verb*|$\Omega$| {\color{green} \% => $\Omega$}
+		\end{block}
+	\end{frame}
+	%--------------------------------------------------------------------------
+
 	%-----------Phần của Hùng
+	\begin{frame}[fragile]{\textbf{Cách chèn các kí tự đặc biệt trong \LaTeX}}
+		\large Trong \LaTeX, ký tự đặc biệt là những ký tự không thể nhập trực tiếp như văn bản bình thường, vì chúng có ý nghĩa riêng trong hệ thống.
+		\begin{block}{\textbf{\textit{Ví dụ:}}}
+			\begin{itemize}
+				\item \textbf{\$} dùng để mở chế độ toán
+				\item \textbf{\%} dùng để comment
+				\item \textbf{\_} dùng để viết chỉ số dưới
+			\end{itemize}
+			\textbf{$\to$ Vì vậy, nếu muốn hiển thị các ký tự này, ta có cách viết đặc biệt.}
+		\end{block}
+	\end{frame}
     \begin{frame}{\textbf{Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
     	\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}
 		\begin{table}[h]
 			\begin{tabular}{|c|c|}
 				\hline
 				\rowcolor{red!80}
-				\color{white}\textbf{Ky tu} & \color{white}\textbf{Cach viet trong} \textbf{\LaTeX}\\
+				\color{white}\textbf{Ký tự} & \color{white}\textbf{Cách viết trong} \textbf{\LaTeX}\\
 				\hline
 				\# & \textbackslash\#\\
 				\hline
@@ -163,6 +322,7 @@
 	\end{frame}
 	\newpage
 	\begin{frame}[fragile]{\textbf{Ví dụ tổng hợp:}}
+		\color{blue}\textbf{Code:}
 		\begin{Verbatim}[frame=single,gobble=4,xleftmargin=1cm]
 			\documentclass{article}
 			\usepackage{amssymb}
@@ -179,6 +339,7 @@
 		\end{Verbatim}
 	\end{frame}
 	\begin{frame}{\textbf{Kết quả}}
+		\color{red!80}\textbf{PDF:}
 		% Căn giữa cái khung trên Slide
 		\centering 
 		% Độ rộng của khung là 0.8\textwidth (80% chiều ngang slide)
@@ -194,6 +355,23 @@
 				\vspace{0.3cm} % Tạo khoảng trống phía dưới cho đẹp
 			\end{minipage}
 		}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{Ví dụ công thức Toán học:}}
+		\color{blue}\textbf{Code:}
+		\begin{Verbatim}[frame=single]
+	\[
+	\int_{0}^{\infty} \frac{x^2}{e^x - 1} 
+	\, dx = \frac{\pi^2}{6}
+	\]
+		\end{Verbatim}
+		\color{red!80}\textbf{PDF:}
+		\begin{center}
+			{\Large % Đưa Large ra ngoài môi trường toán
+				\[
+				\fbox{$\displaystyle \int_{0}^{\infty} 
+				\frac{x^2}{e^x - 1} \, dx = \frac{\pi^2}{6}$}
+				\]}
+		\end{center}
 	\end{frame}
 	%--------------------------------------------------------------------------
 	
@@ -287,10 +465,10 @@
 		\begin{figure}[h]
 			\centering
 			\begin{minipage}{0.45\linewidth}
-				\includegraphics[width=0.7\linewidth]{ky_hieu_toan_hoc/khth.png}
+				\includegraphics[width=0.7\linewidth]{assets/ky_hieu_toan_hoc/khth.png}
 			\end{minipage}
 			\begin{minipage}{0.45\linewidth}
-				\includegraphics[width=\linewidth]{ky_hieu_toan_hoc/result.png}
+				\includegraphics[width=\linewidth]{assets/ky_hieu_toan_hoc/result.png}
 			\end{minipage}
 			\caption{Ví dụ minh họa }
 		\end{figure}
