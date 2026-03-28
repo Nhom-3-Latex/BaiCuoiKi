@@ -1,8 +1,8 @@
 \frametitle{\textbf {\textit {Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
-
-		\begin{columns}<1->
+\pause
+		\begin{columns}
 			\column{0.45\textwidth}
-			\begin{block}{Ưu điểm:}<2->
+			\begin{block}{Ưu điểm:}
 				\begin{itemize}
 					\item Không cần file ảnh
 					\item Dễ sử dụng
@@ -10,13 +10,13 @@
 					\item Có thể chèn trực tiếp trong văn bản.
 				\end{itemize}
 			\end{block}
+			\pause
 			\column{0.45\textwidth}
-			\begin{alertblock}{Nhược điểm:}<3->
+			\begin{alertblock}{Nhược điểm:}
 				\begin{itemize}
 					\item Không đa dạng bằng hình ảnh thật
 					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
 				\end{itemize}
 			\end{alertblock}
 		\end{columns}
-
 		
