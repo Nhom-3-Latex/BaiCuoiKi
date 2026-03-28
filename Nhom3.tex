@@ -33,6 +33,20 @@
 \usepackage{multicol}
 \usepackage{fancyvrb}
 \usepackage{listings}
+\definecolor{myDarkRed}{rgb}{0.6, 0, 0}
+\setbeamercolor{block title}{bg=myDarkRed, fg=white}
+\setbeamercolor{block body}{bg=red!5, fg=black}
+% Định nghĩa màu đỏ TDTU (khoảng màu đỏ đô)
+\definecolor{TDTUred}{RGB}{160, 0, 0}
+\definecolor{GrayExample}{RGB}{80, 80, 80}
+% Đổi màu nền của khung tiêu đề sang màu đỏ đô và chữ sang màu trắng
+\setbeamercolor{title}{bg=myDarkRed, fg=white}
+
+% Nếu bạn muốn subtitle cũng nằm trong khung đó và có màu trắng
+\setbeamercolor{subtitle}{fg=white}
+
+% Lệnh quan trọng: Ép Beamer sử dụng kiểu bo góc và đổ bóng cho trang bìa
+\setbeamertemplate{title page}[rounded=true,shadow=true]
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -50,27 +64,28 @@
 		\centering
 		%\includegraphics[scale=0.2]{logo_tdtu/TĐT_logo.png}
 	\end{frame}
-	
-	\begin{frame}{\textbf{\textit{Phân công công việc}}}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|c|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}{\textbf{MSSV}} &\color{white}{\textbf{Họ tên}} &\color{white}{\textbf{Nhiệm vụ}} &\color{white}{\textbf{Tỉ lệ}} & \color{white}{\textbf{Chữ kí}}\\
-				\hline
-				C2500061 & Trần Hoài Nam & $\cdots$ & $\cdots$ & $\cdots$\\
-				\hline
-				C2500174 & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
-				\hline
-				C2500055 & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
-				\hline
-				C2500010 & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
-				\hline
-				C2500049 & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
-				\hline
-			\end{tabular}
-			\caption{Phân công nhiệm vụ}
-		\end{table}
+	\begin{frame}{\textbf{PHÂN CÔNG:}}
+		\begin{block}{Phân công công việc}
+			\begin{table}[h]
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}{\textbf{MSSV}} &\color{white}{\textbf{Họ tên}} &\color{white}{\textbf{Nhiệm vụ}} &\color{white}{\textbf{Tỉ lệ}} & \color{white}{\textbf{Chữ kí}}\\
+					\hline
+					C2500061 & Trần Hoài Nam & $\cdots$ & $\cdots$ & $\cdots$\\
+					\hline
+					C2500174 & Nguyễn Phi Hùng & $\cdots$ & $\cdots$ & $\cdots$\\
+					\hline
+					C2500055 & Hồ Thị Xuân Mai & $\cdots$ & $\cdots$ & $\cdots$\\
+					\hline
+					C2500010 & Trương Cảnh Chân & $\cdots$ & $\cdots$ & $\cdots$\\
+					\hline
+					C2500049 & Phạm Ngọc Khánh Linh & $\cdots$ & $\cdots$ & $\cdots$\\
+					\hline
+				\end{tabular}
+				\caption{Phân công nhiệm vụ}
+			\end{table}
+		\end{block}
 	\end{frame}
 	\begin{frame}{\textbf{\textit{Tóm tắt}}}
 		\begin{block}{\textbf{Các mục chính}}
@@ -100,21 +115,22 @@
 		\end{block}
 	\end{frame}
 	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
-		\textbf{Sự khác biệt}
-		\begin{table}[h]
-			\begin{tabular}{|c|l|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Sử dụng khi}\\
-				\hline
-				\makecell[l]{\$\$\\\texttt{\textbackslash(\textbackslash)}} & \makecell[l]{Dùng khi công thức nằm trong một câu văn\\Không xuống dòng, không đánh số}\\
-				\hline
-				\makecell[l]{\texttt{\textbackslash[\textbackslash]}} & \makecell[l]{Công thức được tách riêng ra 1 dòng\\Không có số thứ tự}\\
-				\hline
-				\makecell[l]{\texttt{\textbackslash begin\{equation\}}} & \makecell[l]{Giống \texttt{\textbackslash[\textbackslash]}\\Có số thứ tự}\\
-				\hline
-			\end{tabular}
-		\end{table}
+		\begin{block}{\textbf{Sự khác biệt}}
+			\begin{table}[h]
+				\begin{tabular}{|c|l|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}\textbf{Ký Tự} & \color{white}\textbf{Sử dụng khi}\\
+					\hline
+					\makecell[l]{\$\$\\\texttt{\textbackslash(\textbackslash)}} & \makecell[l]{Dùng khi công thức nằm trong một câu văn\\Không xuống dòng, không đánh số}\\
+					\hline
+					\makecell[l]{\texttt{\textbackslash[\textbackslash]}} & \makecell[l]{Công thức được tách riêng ra 1 dòng\\Không có số thứ tự}\\
+					\hline
+					\makecell[l]{\texttt{\textbackslash begin\{equation\}}} & \makecell[l]{Giống \texttt{\textbackslash[\textbackslash]}\\Có số thứ tự}\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
 	\end{frame}
 	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
@@ -184,30 +200,30 @@
 	\end{frame}
 
 	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
-		\textbf{Bảng chữ cái hy lạp}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết} & \color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết}\\
-				\hline
-				$\alpha$ & \verb*|\alpha| & $\beta$ & \verb*|\beta|\\
-				$\gamma$ & \verb*|\gamma| & $\delta$ & \verb*|\delta|\\
-				$\epsilon$ & \verb*|\epsilon| & $\zeta$ & \verb*|\zeta|\\
-				$\eta$ & \verb*|\eta| & $\theta$ & \verb*|\theta|\\
-				$\iota$ & \verb*|\iota| & $\kappa$ & \verb*|\kappa|\\
-				$\lambda$ & \verb*|\lambda| & $\mu$ & \verb*|\mu|\\
-				$\nu$ & \verb*|\nu| & $\xi$ & \verb*|\xi|\\
-				o & o & $\pi$ & \verb*|\pi|\\
-				$\rho$ & \verb*|\rho| & $\sigma$ & \verb*|\sigma|\\
-				$\tau$ & \verb*|\tau| & $\upsilon$ & \verb*|\upsilon|\\
-				$\phi$ & \verb*|\phi| & $\chi$ & \verb*|\chi|\\
-				$\psi$ & \verb*|\psi| & $\omega$ & \verb*|\omega|\\
-				\hline
-			\end{tabular}
-		\end{table}
+		\begin{block}{\textbf{Bảng chữ cái hy lạp}}
+			\begin{table}[h]
+				\begin{tabular}{|c|c|c|c|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết} & \color{white}\textbf{Ký Tự} & \color{white}\textbf{Cách viết}\\
+					\hline
+					$\alpha$ & \verb*|\alpha| & $\beta$ & \verb*|\beta|\\
+					$\gamma$ & \verb*|\gamma| & $\delta$ & \verb*|\delta|\\
+					$\epsilon$ & \verb*|\epsilon| & $\zeta$ & \verb*|\zeta|\\
+					$\eta$ & \verb*|\eta| & $\theta$ & \verb*|\theta|\\
+					$\iota$ & \verb*|\iota| & $\kappa$ & \verb*|\kappa|\\
+					$\lambda$ & \verb*|\lambda| & $\mu$ & \verb*|\mu|\\
+					$\nu$ & \verb*|\nu| & $\xi$ & \verb*|\xi|\\
+					o & o & $\pi$ & \verb*|\pi|\\
+					$\rho$ & \verb*|\rho| & $\sigma$ & \verb*|\sigma|\\
+					$\tau$ & \verb*|\tau| & $\upsilon$ & \verb*|\upsilon|\\
+					$\phi$ & \verb*|\phi| & $\chi$ & \verb*|\chi|\\
+					$\psi$ & \verb*|\psi| & $\omega$ & \verb*|\omega|\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
 	\end{frame}
-
 	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Viết Hoa Chữ Hy Lạp}
 		\begin{block}{\textbf{Code}}
@@ -236,141 +252,142 @@
 		\end{block}
 	\end{frame}
     \begin{frame}{\textbf{2.1 Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
-    	\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Ký tự} & \color{white}\textbf{Cách viết trong} \textbf{\LaTeX}\\
-				\hline
-				\# & \textbackslash\#\\
-				\hline
-				\$ & \textbackslash\$\\
-				\hline
-				\% & \textbackslash\%\\
-				\hline
-				\& & \textbackslash\&\\
-				\hline
-				\_ & \textbackslash\_\\
-				\hline
-				\{\} & \textbackslash\{ \textbackslash\}\\
-				\hline
-				\^{}&\textbackslash\textasciicircum\{ \}\\
-				\hline
-				\~{}&\textbackslash\~{}\{ \}\\
-				\hline
-				\textbackslash\ & \texttt{\textbackslash textbackslash}\\
-				\hline
-			\end{tabular}
-		\end{table}
+    	\begin{block}{\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}}
+    		\begin{table}[h]
+    			\begin{tabular}{|c|c|}
+    				\hline
+    				\rowcolor{red!80}
+    				\color{white}\textbf{Ký tự} & \color{white}\textbf{Cách viết trong} \textbf{\LaTeX}\\
+    				\hline
+    				\# & \textbackslash\#\\
+    				\hline
+    				\$ & \textbackslash\$\\
+    				\hline
+    				\% & \textbackslash\%\\
+    				\hline
+    				\& & \textbackslash\&\\
+    				\hline
+    				\_ & \textbackslash\_\\
+    				\hline
+    				\{\} & \textbackslash\{ \textbackslash\}\\
+    				\hline
+    				\^{}&\textbackslash\textasciicircum\{ \}\\
+    				\hline
+    				\~{}&\textbackslash\~{}\{ \}\\
+    				\hline
+    				\textbackslash\ & \texttt{\textbackslash textbackslash}\\
+    				\hline
+    			\end{tabular}
+    		\end{table}
+    	\end{block}
 		\textit{\textbf{Ví dụ:} Giá tiền là \textbf{\texttt{\textbackslash\$100}} và giảm \textbf{\texttt{20\textbackslash\%}}} $\to$ Giá tiền là \textbf{\$100} và giảm \textbf{20\%.}
 	\end{frame}
 	\begin{frame}{\textbf{2.2 Dùng lệnh có sẵn (symbols)}}
-		\textbf{Các kí hiệu phổ biến:}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Kí hiệu} &\color{white}\textbf{Cách viết trong \LaTeX}\\
-				\hline
-				\copyright & \texttt{\textbackslash copyright}\\
-				\hline
-				\textregistered & \texttt{\textbackslash textregistered}\\
-				\hline
-				\textdegree & \texttt{\textbackslash textdegree}\\
-				\hline
-				\dag & \texttt{\textbackslash dag}\\
-				\hline
-				\ddag & \texttt{\textbackslash ddag}\\
-				\hline
-				$\alpha, \beta, \gamma$ & \texttt{\textbackslash alpha}, \texttt{\textbackslash beta}, \texttt{\textbackslash gamma}\\
-				\hline
-				$\infty$ & \texttt{\textbackslash infty}\\
-				\hline
-				$\sum$ & \texttt{\textbackslash sum}\\
-				\hline
-				$\int$ & \texttt{\textbackslash int}\\
-				\hline
-				$\leq, \geq$ & \texttt{\textbackslash leq},\texttt{\textbackslash geq}\\
-				\hline
-			\end{tabular}
-		\end{table}
-		\textbf{Ví dụ:} \textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
+		\begin{block}{\textbf{Các kí hiệu phổ biến:}}
+			\begin{table}[h]
+				\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}\textbf{Kí hiệu} &\color{white}\textbf{Cách viết trong \LaTeX}\\
+					\hline
+					\copyright & \texttt{\textbackslash copyright}\\
+					\hline
+					\textregistered & \texttt{\textbackslash textregistered}\\
+					\hline
+					\textdegree & \texttt{\textbackslash textdegree}\\
+					\hline
+					\dag & \texttt{\textbackslash dag}\\
+					\hline
+					\ddag & \texttt{\textbackslash ddag}\\
+					\hline
+					$\alpha, \beta, \gamma$ & \texttt{\textbackslash alpha}, \texttt{\textbackslash beta}, \texttt{\textbackslash gamma}\\
+					\hline
+					$\infty$ & \texttt{\textbackslash infty}\\
+					\hline
+					$\sum$ & \texttt{\textbackslash sum}\\
+					\hline
+					$\int$ & \texttt{\textbackslash int}\\
+					\hline
+					$\leq, \geq$ & \texttt{\textbackslash leq},\texttt{\textbackslash geq}\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
+		\begin{block}{Ví dụ}
+			\textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
+		\end{block}
 	\end{frame}
 	\begin{frame}{\textbf{2.3 Dùng gói mở rộng}}
-		\textbf{Một số kí tự cần có package:}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Môi trường} & \color{white}\textbf{Kí tự cần} \\
-				\hline
-				\multirow{2}{*}{\texttt{\textbackslash usepackage\{textcomp\}}} & \texttt{\textbackslash textdegree} \\
-				\cline{2-2}
-				& \texttt{\textbackslash textcent} \\
-				\hline
-				\multirow{2}{*}{\texttt{\textbackslash usepackage\{amssymb\}}} &
-				\texttt{\textbackslash mathbb\{R\}} \\
-				\cline{2-2}
-				& \texttt{\textbackslash mathbb\{Z\}} \\
-				\hline
-			\end{tabular}
-		\end{table}
+		\begin{block}{\textbf{Một số kí tự cần có package:}}
+			\begin{table}[h]
+				\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}\textbf{Môi trường} & \color{white}\textbf{Kí tự cần} \\
+					\hline
+					\multirow{2}{*}{\texttt{\textbackslash usepackage\{textcomp\}}} & \texttt{\textbackslash textdegree} \\
+					\cline{2-2}
+					& \texttt{\textbackslash textcent} \\
+					\hline
+					\multirow{2}{*}{\texttt{\textbackslash usepackage\{amssymb\}}} &
+					\texttt{\textbackslash mathbb\{R\}} \\
+					\cline{2-2}
+					& \texttt{\textbackslash mathbb\{Z\}} \\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
 	\end{frame}
 	\newpage
 	\begin{frame}[fragile]{\textbf{Ví dụ tổng hợp:}}
-		\color{blue}\textbf{Code:}
-		\begin{Verbatim}[frame=single,gobble=4,xleftmargin=1cm]
-			\documentclass{article}
-			\usepackage{amssymb}
-			\usepackage{textcomp}
-			\usepackage{marvosym}
-			\begin{document}
-				Giá: \$50 \\
-				Phần trăm: 20\% \\
-				Ký hiệu: \# \& \_ \\
-				Toán học: $\alpha + \beta = \gamma$ \\
-				Nhiệt độ: 30\textdegree C \\
-				Biểu tượng: \Smiley \Telefon
-			\end{document}
-		\end{Verbatim}
+		\begin{block}{\textbf{CODE}}
+				\begin{Verbatim}[gobble=4,xleftmargin=1cm]
+				\documentclass{article}
+				\usepackage{amssymb}
+				\usepackage{textcomp}
+				\usepackage{marvosym}
+				\begin{document}
+					Giá: \$50 \\
+					Phần trăm: 20\% \\
+					Ký hiệu: \# \& \_ \\
+					Toán học: $\alpha + \beta = \gamma$ \\
+					Nhiệt độ: 30\textdegree C \\
+					Biểu tượng: \Smiley \Telefon
+				\end{document}
+			\end{Verbatim}
+		\end{block}
 	\end{frame}
 	\begin{frame}{\textbf{Kết quả}}
-		\color{red!80}\textbf{PDF:}
-		% Căn giữa cái khung trên Slide
-		\centering 
-		% Độ rộng của khung là 0.8\textwidth (80% chiều ngang slide)
-		\fbox{
-			\begin{minipage}{0.8\textwidth}
-				\vspace{0.3cm} % Tạo khoảng trống phía trên cho đẹp
-				Giá: \$50 \\
-				Phần trăm: 20\% \\
-				Ký hiệu: \# \& \_ \\
-				Toán học: $\alpha + \beta = \gamma$ \\
-				Nhiệt độ: 30\textdegree C \\
-				Biểu tượng: \Smiley \Telefon
-				\vspace{0.3cm} % Tạo khoảng trống phía dưới cho đẹp
-			\end{minipage}
-		}
+		\begin{block}{\textbf{PDF}}
+			\Large
+			\vspace{0.3cm} % Tạo khoảng trống phía trên cho đẹp
+			Giá: \$50 \\
+			Phần trăm: 20\% \\
+			Ký hiệu: \# \& \_ \\
+			Toán học: $\alpha + \beta = \gamma$ \\
+			Nhiệt độ: 30\textdegree C \\
+			Biểu tượng: \Smiley \Telefon
+			\vspace{0.3cm} % Tạo khoảng trống phía dưới cho đẹp
+		\end{block}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{Ví dụ công thức Toán học:}}
-		\color{blue}\textbf{Code:}
-		\begin{Verbatim}[frame=single]
-	\[
-	\int_{0}^{\infty} \frac{x^2}{e^x - 1} 
-	\, dx = \frac{\pi^2}{6}
-	\]
-		\end{Verbatim}
-		\color{red!80}\textbf{PDF:}
-		\begin{center}
-			{\Large % Đưa Large ra ngoài môi trường toán
-				\[
-				\fbox{$\displaystyle \int_{0}^{\infty} 
+		\begin{block}{\textbf{CODE}}
+				\begin{Verbatim}
+\[
+\int_{0}^{\infty} \frac{x^2}{e^x - 1} 
+\, dx = \frac{\pi^2}{6}
+\]
+			\end{Verbatim}
+		\end{block}
+		\begin{block}{\textbf{PDF}}
+			\Large
+			\[
+			\fbox{$\displaystyle \int_{0}^{\infty} 
 				\frac{x^2}{e^x - 1} \, dx = \frac{\pi^2}{6}$}
-				\]}
-		\end{center}
+			\]
+		\end{block}
 	\end{frame}
-	%--------------------------------------------------------------------------
+	%--------------------------------------------------------------	------------
 	
 	
 	%phần của Trần Hoài Nam 	
@@ -403,9 +420,9 @@
 			\end{table}
 		\end{block}
 		\pause
-		\begin{alertblock}{Lưu ý:}
+		\begin{block}{Lưu ý:}
 			Các kí hiệu toán học phải được đặt trong math mode (chế độ toán) như là \verb|$...$, \(...\), \[...\],...|
-		\end{alertblock}
+		\end{block}
 		\pause
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng dạng icon}}}
@@ -417,9 +434,9 @@
 			\verb|\ding{<số>}|
 		\end{block}
 		\pause
-		\begin{exampleblock}{Ví dụ:}
+		\begin{block}{Ví dụ:}
 			\ding{51}: \verb|\ding{51}|, \ding{55}: \verb|\ding{55}|, \ding{60}: \verb|\ding{60}|,...
-		\end{exampleblock}
+		\end{block}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{Icon hiện đại}}}
 		\begin{block}{Khai báo:}
@@ -452,9 +469,9 @@
 			\verb|Môi trường usepackage{marvosym}|
 		\end{block}
 		\pause
-		\begin{exampleblock}{Ví dụ: }
+		\begin{block}{Ví dụ: }
 			\Telefon: \verb|\Telefon|, \Letter: \verb|\Letter|, \EUR: \verb|\EUR|, \Lightning: \verb|\Lightning| 
-		\end{exampleblock}
+		\end{block}
 		\pause
 		\begin{block}{Mục đích:}
 			Cung cấp các biểu tượng mang tính thực tế.\\
@@ -481,7 +498,7 @@
 		\pause
 		\begin{columns}
 			\column{0.45\textwidth}
-			\begin{block}{Ưu điểm:}
+			\begin{block}{\textbf{Ưu điểm:}}
 				\begin{itemize}
 					\item Không cần file ảnh 
 					\item Dễ sử dụng 
@@ -491,12 +508,12 @@
 			\end{block}
 			\pause
 			\column{0.45\textwidth}
-			\begin{alertblock}{Nhược điểm:}
+			\begin{block}{\textbf{Nhược điểm:}}
 				\begin{itemize}
 					\item Không đa dạng bằng hình ảnh thật
 					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
 				\end{itemize}
-			\end{alertblock}
+			\end{block}
 		\end{columns}
 		
 	\end{frame}
