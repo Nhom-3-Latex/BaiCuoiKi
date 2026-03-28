@@ -51,6 +51,9 @@
 \setbeamertemplate{title page}[rounded=true,shadow=true]
 %gói transition mờ 
 \setbeamercovered{transparent=30}
+\newcounter{group}
+\newcommand{\slidenum}{\thegroup.\thesubslide}
+\newcounter{subslide}
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -126,20 +129,21 @@
 	\end{frame}
 
 	% Phần của Trương Cảnh Chân
-	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\setcounter{group}{1}
+	\begin{frame}{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Cách chèn ký tự toán học}
-		\begin{block}{\textbf{Có 3 cách để mở chế độ toán học: }}
+		\begin{block}{\textbf{Có 3 cách để mở chế độ toán học:}}
 			\begin{itemize}
 				\pause
-				\item Viết toán học ở trong \$\$
+				\item Viết trong cặp dấu \texttt{\$} hoặc \texttt{\$\$} (Ví dụ: \texttt{\$a+b=c\$})
 				\pause
-				\item Viết toán học ở trong \texttt{\textbackslash(\textbackslash)} hoặc \texttt{\textbackslash[\textbackslash]}
+				\item Viết trong \texttt{\textbackslash(\dots\textbackslash)} hoặc \texttt{\textbackslash[\dots\textbackslash]}
 				\pause
-				\item Viết toán học ở trong lệnh \texttt{\textbackslash begin\{equation\}}
+				\item Sử dụng môi trường \texttt{equation} (\texttt{\textbackslash begin\{equation\}\dots\textbackslash end\{equation\}})
 			\end{itemize}
 		\end{block}
 	\end{frame}
-	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\begin{block}{\textbf{Sự khác biệt}}
 			\begin{table}[h]
 				\begin{tabular}{|c|l|}
@@ -157,7 +161,7 @@
 			\end{table}
 		\end{block}
 	\end{frame}
-	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{\textbf{Code:}}
 			\$1 + 1 = 2\$ {\color{blue} \% Sử dụng \$}\\
@@ -169,7 +173,7 @@
 			\(1 + 1 = 2\)
 		\end{block}
 	\end{frame}
-	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{\textbf{Code:}}
 			\texttt{\textbackslash[1 + 1 = 2\textbackslash]} {\color{blue} Sử dụng  \texttt{\textbackslash[\textbackslash]}}\\
@@ -183,7 +187,7 @@
 			\end{equation}
 		\end{block}
 	\end{frame}
-	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{\large Cách gõ ký tự hy lạp trong toán học}
 		\begin{figure}[h]
 			\centering
@@ -205,7 +209,7 @@
 			\end{itemize}
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ:}
 		\begin{block}{\textbf{Code}}
 			\verb*|$\alpha$|\\ 
@@ -219,7 +223,7 @@
 			$\gamma$
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\begin{block}{\textbf{Bảng chữ cái hy lạp}}
 			\begin{table}[h]
 				\begin{tabular}{|c|c|c|c|}
@@ -244,7 +248,7 @@
 			\end{table}
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Viết Hoa Chữ Hy Lạp}
 		\begin{block}{\textbf{Code}}
 			\verb*|$\delta$| {\color{green} \% => $\delta$}\\
@@ -272,7 +276,7 @@
 			\caption*{Công Thức Toán Học}
 		\end{figure}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Các ký hiệu toán học cơ bản}
 		\begin{table}[h]
 			\begin{tabular}{|c|c|}
@@ -292,7 +296,7 @@
 			\end{tabular}
 		\end{table}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\begin{block}{Cách viết tập số}
 			\pause
 			Sử dụng Lệnh \verb*|\mathbb{Tập_số_mà_bạn_muốn}|\\
@@ -304,7 +308,7 @@
 			Số vô tỉ: $\mathbb{R}$ => \verb*|\mathbb{R}|\\
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{PDF}
 			The sequence $(x_n)$ is convergent if there exists a real number a such that
@@ -321,8 +325,9 @@
 	\end{frame}
 	%--------------------------------------------------------------------------
 
-	%-----------Phần của Hùng
-	\begin{frame}[fragile]{\textbf{\textit{2. Cách chèn các kí tự đặc biệt trong \LaTeX}}}
+	%-----------Phần của Phi Hùng
+	\setcounter{group}{2}
+	\begin{frame}[fragile]{\textbf{\textit{\stepcounter{subslide}\slidenum. Cách chèn các kí tự đặc biệt trong \LaTeX}}}
 		\large Trong \LaTeX, ký tự đặc biệt là những ký tự không thể nhập trực tiếp như văn bản bình thường, vì chúng có ý nghĩa riêng trong hệ thống.
 		\begin{block}{\textbf{\textit{Ví dụ:}}}
 			\begin{itemize}
@@ -333,7 +338,7 @@
 			\textbf{$\to$ Vì vậy, nếu muốn hiển thị các ký tự này, ta có cách viết đặc biệt.}
 		\end{block}
 	\end{frame}
-    \begin{frame}{\textbf{2.1 Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
+    \begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
     	\begin{block}{\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}}
     		\begin{table}[h]
     			\begin{tabular}{|c|c|}
@@ -364,7 +369,7 @@
     	\end{block}
 		\textit{\textbf{Ví dụ:} Giá tiền là \textbf{\texttt{\textbackslash\$100}} và giảm \textbf{\texttt{20\textbackslash\%}}} $\to$ Giá tiền là \textbf{\$100} và giảm \textbf{20\%.}
 	\end{frame}
-	\begin{frame}{\textbf{2.2 Dùng lệnh có sẵn (symbols)}}
+	\begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng lệnh có sẵn (symbols)}}
 		\begin{block}{\textbf{Các kí hiệu phổ biến:}}
 			\begin{table}[h]
 				\begin{tabular}{|c|c|}
@@ -395,11 +400,9 @@
 				\end{tabular}
 			\end{table}
 		\end{block}
-		\begin{block}{Ví dụ}
-			\textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
-		\end{block}
+		\textbf{Ví dụ:}\textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
 	\end{frame}
-	\begin{frame}{\textbf{2.3 Dùng gói mở rộng}}
+	\begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng gói mở rộng}}
 		\begin{block}{\textbf{Một số kí tự cần có package:}}
 			\begin{table}[h]
 				\begin{tabular}{|c|c|}
@@ -471,14 +474,15 @@
 	\end{frame}
 	%--------------------------------------------------------------	------------
 	
-	
+	\setcounter{group}{3}
+	\setcounter{subslide}{1}
 	%phần của Trần Hoài Nam 	
 	\begin{frame}{\textbf{\textit{Mục 3}}}
 		\centering
 		\Huge
 		\textcolor{blue!60}{\textbf{Chèn các biểu tượng hình ảnh trong \LaTeX}}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{3. Ký hiệu toán học}}}%fragile cho phép sử dụng verb trong beamer
+	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Ký hiệu toán học}}}%fragile cho phép sử dụng verb trong beamer
 		\begin{block}{Khai báo:}
 			\verb|Môi trường \usepackage{amssymb}|
 		\end{block}
@@ -506,7 +510,8 @@
 			Các kí hiệu toán học phải được đặt trong math mode (chế độ toán) như là \verb|$...$, \(...\), \[...\],...|
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng dạng icon}}}
+	\stepcounter{subslide}
+	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Biểu tượng dạng icon}}}
 		\begin{block}{Khai báo:}
 			\verb|Môi trường \usepackage{pifont}|
 		\end{block}
@@ -519,7 +524,8 @@
 			\ding{51}: \verb|\ding{51}|, \ding{55}: \verb|\ding{55}|, \ding{60}: \verb|\ding{60}|,...
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{Icon hiện đại}}}
+	\stepcounter{subslide}
+	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Icon hiện đại}}}
 		\begin{block}{Khai báo:}
 			\verb|Môi trường \usepackage{fontawesome}|
 		\end{block}
@@ -545,7 +551,8 @@
 			\end{table}
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng thực tế}}}
+	\stepcounter{subslide}
+	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Biểu tượng thực tế}}}
 		\begin{block}{Khai báo:}
 			\verb|Môi trường usepackage{marvosym}|
 		\end{block}
@@ -575,7 +582,8 @@
 			Kết hợp nhiều package để tạo nhiều loại biểu tượng khác nhau.
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{\textit{Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
+	\stepcounter{subslide}
+	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
 		\pause
 		\begin{columns}
 			\column{0.45\textwidth}
