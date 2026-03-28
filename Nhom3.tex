@@ -6,6 +6,8 @@
 \usetheme{CambridgeUs}
 \usepackage{makecell}
 \usepackage{caption}
+\usepackage{tikz}
+\usepackage{amsmath, amssymb}
 
 % Change Color
 % \usecolortheme{dolphin}
@@ -47,6 +49,8 @@
 
 % Lệnh quan trọng: Ép Beamer sử dụng kiểu bo góc và đổ bóng cho trang bìa
 \setbeamertemplate{title page}[rounded=true,shadow=true]
+%gói transition mờ 
+\setbeamercovered{transparent=30}
 \begin{document}
 	\author[Nhóm 3]{\textbf{\underline{Nhóm 3}}}
 	\title[Báo cáo kết thúc môn học]{\textbf{Báo cáo kết thúc môn học}}
@@ -87,6 +91,27 @@
 			\end{table}
 		\end{block}
 	\end{frame}
+	\begin{frame}{\textbf{\textit{Phân công công việc}}}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}{\textbf{MSSV}} &\color{white}{\textbf{Họ tên}} &\color{white}{\textbf{Nhiệm vụ}} &\color{white}{\textbf{Tỉ lệ}} & \color{white}{\textbf{Chữ kí}}\\
+				\hline
+				C2500010 & Trương Cảnh Chân & Code & $\cdots$ & $\cdots$ \\
+				\hline
+				C2500174 & Nguyễn Phi Hùng & Code & $\cdots$ & $\cdots$\\
+				\hline
+				C2500049 & Phạm Ngọc Khánh Linh & Tìm nội dung & $\cdots$ & $\cdots$\\
+				\hline
+				C2500055 & Hồ Thị Xuân Mai & Tìm nội dung & $\cdots$ & $\cdots$\\
+				\hline
+				C2500061 & Trần Hoài Nam & Code & $\cdots$ & $\cdots$\\
+				\hline
+			\end{tabular}
+			\caption{Phân công nhiệm vụ}
+		\end{table}
+	\end{frame}
 	\begin{frame}{\textbf{\textit{Tóm tắt}}}
 		\begin{block}{\textbf{Các mục chính}}
 			\begin{itemize}
@@ -103,7 +128,7 @@
 	% Phần của Trương Cảnh Chân
 	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Cách chèn ký tự toán học}
-		\begin{block}{\textbf{Có 3 cách để chèn: }}
+		\begin{block}{\textbf{Có 3 cách để mở chế độ toán học: }}
 			\begin{itemize}
 				\pause
 				\item Viết toán học ở trong \$\$
@@ -144,7 +169,6 @@
 			\(1 + 1 = 2\)
 		\end{block}
 	\end{frame}
-
 	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ}
 		\begin{block}{\textbf{Code:}}
@@ -159,7 +183,6 @@
 			\end{equation}
 		\end{block}
 	\end{frame}
-
 	\begin{frame}{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{\large Cách gõ ký tự hy lạp trong toán học}
 		\begin{figure}[h]
@@ -170,7 +193,6 @@
 			\caption*{\textbf{Bảng chữ cái hy lạp}}
 		\end{figure}
 	\end{frame}
-
 	\begin{frame}
 		\begin{block}{\textbf{Cách viết chữ Hy Lạp:}}
 			\begin{itemize}
@@ -183,7 +205,6 @@
 			\end{itemize}
 		\end{block}
 	\end{frame}
-
 	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\textbf{Ví dụ:}
 		\begin{block}{\textbf{Code}}
@@ -198,7 +219,6 @@
 			$\gamma$
 		\end{block}
 	\end{frame}
-
 	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
 		\begin{block}{\textbf{Bảng chữ cái hy lạp}}
 			\begin{table}[h]
@@ -236,6 +256,68 @@
 			\verb*|$\omege$| {\color{green} \% => $\epsilon$}\\
 			\verb*|$\Omega$| {\color{green} \% => $\Omega$}
 		\end{block}
+	\end{frame}
+	\begin{frame}
+		\textbf{Cách chèn ký tự Toán học}
+		\begin{figure}
+			\begin{tikzpicture}[scale=1, transform shape]
+				\node (i) at (1.5,2.5) {$\sqrt{-1} = i$};
+				\node (ii) at (4.5,5.5) {$1 + 1 = 3$};
+				\node (iii) at (8,2.5) {$\int_{-\infty}^\infty e^{x^2}dx$};
+				\node (iv) at (10,5.5) {$\sin^2(x) + \cos^2(x) = 1$};
+				\node (a) at (1.5,4) {$\sum_{i = 1}^{N} (y_i - f(x))^2$};
+				\node (b) at (4.5,2) {$\frac{\partial f}{\partial x}$};
+				\node (c) at (8,4) {$f(x) = x^2 + 2x - 3$};
+			\end{tikzpicture}
+			\caption*{Công Thức Toán Học}
+		\end{figure}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Các ký hiệu toán học cơ bản}
+		\begin{table}[h]
+			\begin{tabular}{|c|c|}
+				\hline
+				\rowcolor{red!80}
+				\color{white}\textbf{Ký hiệu} & \color{white}\textbf{Cách viết}\\
+				\hline
+				$\geqslant$ & \verb*|\geqslant|\\
+				$\leqslant$ & \verb*|\leqslant|\\
+				$a^{2}$ & \verb*|a^{2}|\\
+				$\frac{1}{2}$ & \verb*|\frac{1}{2}|\\
+				$a_1$ & \verb*|a_1|\\
+				$\sqrt{4} = 2$ & \verb*|\sqrt{4}=2|\\
+				$\forall$ & \verb*|\forall|\\
+				$\exists$ & \verb*|\exists|\\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\begin{block}{Cách viết tập số}
+			\pause
+			Sử dụng Lệnh \verb*|\mathbb{Tập_số_mà_bạn_muốn}|\\
+			\pause
+			Ví dụ:\\
+			Số tự nhiên: $\mathbb{N}$ => \verb*|\mathbb{N}|\\
+			Số nguyên: $\mathbb{Z}$ => \verb*|\mathbb{Z}|\\
+			Số hữu tỉ: $\mathbb{Q}$ => \verb*|\mathbb{Q}|\\
+			Số vô tỉ: $\mathbb{R}$ => \verb*|\mathbb{R}|\\
+		\end{block}
+	\end{frame}
+	\begin{frame}[fragile]{\textbf{\textit{1. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
+		\textbf{Ví dụ}
+		\begin{block}{PDF}
+			The sequence $(x_n)$ is convergent if there exists a real number a such that
+			\[
+				\forall \epsilon > 0,\, \exists N \in \mathbb{N},\, n \geqslant N \Rightarrow |x_n - a| < \epsilon
+			\]
+		\end{block}
+		\begin{verbatim}
+		\[
+			\forall \epsilon > 0,\, \exists N \in \mathbb{N},\,
+			n \geqslant N \Rightarrow |x_n - a| < \epsilon
+		\]
+		\end{verbatim}
 	\end{frame}
 	%--------------------------------------------------------------------------
 
@@ -423,7 +505,6 @@
 		\begin{block}{Lưu ý:}
 			Các kí hiệu toán học phải được đặt trong math mode (chế độ toán) như là \verb|$...$, \(...\), \[...\],...|
 		\end{block}
-		\pause
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{Biểu tượng dạng icon}}}
 		\begin{block}{Khai báo:}
