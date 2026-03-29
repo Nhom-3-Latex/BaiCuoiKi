@@ -1,22 +1,8 @@
-\frametitle{\textbf {\textit {\slidenum . Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
-\pause
-		\begin{columns}
-			\column{0.45\textwidth}
-			\begin{block}{\textbf{Ưu điểm:}}
-				\begin{itemize}
-					\item Không cần file ảnh
-					\item Dễ sử dụng
-					\item Nhẹ, chạy nhanh
-					\item Có thể chèn trực tiếp trong văn bản.
-				\end{itemize}
-			\end{block}
-			\pause
-			\column{0.45\textwidth}
-			\begin{block}{\textbf{Nhược điểm:}}
-				\begin{itemize}
-					\item Không đa dạng bằng hình ảnh thật
-					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
-				\end{itemize}
-			\end{block}
-		\end{columns}
-		
+\frametitle{\textbf{\textit{Câu hỏi 6}}}
+		\textbf{Câu hỏi:} Tại sao không thể dùng trực tiếp ký tự \_ trong văn bản \LaTeX?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Vì \_ là ký hiệu dành cho chỉ số dưới trong math mode
+			\item Muốn hiển thị phải viết \texttt{\textbackslash\_}
+		\end{itemize}

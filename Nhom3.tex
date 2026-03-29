@@ -634,6 +634,94 @@
 				\end{itemize}
 			\end{block}
 		\end{columns}
+	\end{frame}
+		\begin{frame}
+		\centering
 		
+		\vspace{1cm}
+		
+		\begin{beamercolorbox}[rounded=true,shadow=true,sep=1em]{title}
+			\centering
+			{\Huge \textbf{\MakeUppercase{trả lời câu hỏi}}}\\[0.3cm]
+			%{\Large \MakeUppercase{trong} \LaTeX}
+		\end{beamercolorbox}
+		
+		\vspace{1cm}
+	\end{frame}
+	% Tạm tắt transparency
+	\setbeamercovered{invisible}
+	% Slide 1: Câu hỏi 1
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 1}}}
+		\textbf{Câu hỏi:} Làm thế nào để bật math mode trong \LaTeX?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Dùng \texttt{\$...\$} cho inline math: \$a+b=c\$
+			\item Dùng \texttt{\textbackslash[...\textbackslash]} cho display math:
+			\[
+			\int_0^1 x^2 \, dx
+			\]
+		\end{itemize}
+	\end{frame}
+	
+	% Slide 2: Câu hỏi 2
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 2}}}
+		\textbf{Câu hỏi:} Math mode trong \LaTeX dùng để làm gì?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Viết công thức và ký hiệu toán học 
+			\item Ví dụ: $\alpha, \sum, \int$
+		\end{itemize}
+	\end{frame}
+	
+	% Slide 3: Câu hỏi 3
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 3}}}
+		\textbf{Câu hỏi:} Làm thế nào để viết các ký tự Hy Lạp $\alpha, \beta, \gamma$ trong \LaTeX?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Sử dụng lệnh: \texttt{\textbackslash alpha}, \texttt{\textbackslash beta}, \texttt{\textbackslash gamma} và phải đặt trong math mode
+			\item Ví dụ: $\alpha, \beta, \gamma$
+		\end{itemize}
+	\end{frame}
+	
+	% Slide 4: Câu hỏi 4
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 4}}}
+		\textbf{Câu hỏi:} Sự khác nhau giữa ký tự Hy Lạp thường và hoa trong \LaTeX là gì?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Thường: \$\texttt{\textbackslash alpha}\$ $\rightarrow$ $\alpha$
+			\item Hoa: \$\texttt{\textbackslash Gamma}\$ $\rightarrow$ $\Gamma$
+		\end{itemize}
+	\end{frame}
+	
+	% Slide 5: Câu hỏi 5
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 5}}}
+		\textbf{Câu hỏi:} Làm thế nào để viết ký tự đặc biệt \#, \$, \% trong \LaTeX?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Thêm \textbackslash trước ký tự
+			\item Ví dụ: \texttt{\textbackslash\#}, \texttt{\textbackslash\$}, \texttt{\textbackslash\%}
+		\end{itemize}
+	\end{frame}
+	
+	% Slide 6: Câu hỏi 6
+	\begin{frame}[fragile]
+		\frametitle{\textbf{\textit{Câu hỏi 6}}}
+		\textbf{Câu hỏi:} Tại sao không thể dùng trực tiếp ký tự \_ trong văn bản \LaTeX?\\[0.5em]
+		\pause
+		\textbf{Trả lời:}
+		\begin{itemize}
+			\item Vì \_ là ký hiệu dành cho chỉ số dưới trong math mode
+			\item Muốn hiển thị phải viết \texttt{\textbackslash\_}
+		\end{itemize}
 	\end{frame}
 \end{document}
