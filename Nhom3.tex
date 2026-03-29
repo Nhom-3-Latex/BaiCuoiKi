@@ -277,27 +277,28 @@
 		\end{figure}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
-		\textbf{Các ký hiệu toán học cơ bản}
-		\begin{table}[h]
-			\begin{tabular}{|c|c|}
-				\hline
-				\rowcolor{red!80}
-				\color{white}\textbf{Ký hiệu} & \color{white}\textbf{Cách viết}\\
-				\hline
-				$\geqslant$ & \verb*|\geqslant|\\
-				$\leqslant$ & \verb*|\leqslant|\\
-				$a^{2}$ & \verb*|a^{2}|\\
-				$\frac{1}{2}$ & \verb*|\frac{1}{2}|\\
-				$a_1$ & \verb*|a_1|\\
-				$\sqrt{4} = 2$ & \verb*|\sqrt{4}=2|\\
-				$\forall$ & \verb*|\forall|\\
-				$\exists$ & \verb*|\exists|\\
-				\hline
-			\end{tabular}
-		\end{table}
+		\begin{block}{\textbf{Các ký hiệu toán học cơ bản}}
+			\begin{table}[h]
+				\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{red!80}
+					\color{white}\textbf{Ký hiệu} & \color{white}\textbf{Cách viết}\\
+					\hline
+					$\geqslant$ & \verb*|\geqslant|\\
+					$\leqslant$ & \verb*|\leqslant|\\
+					$a^{2}$ & \verb*|a^{2}|\\
+					$\frac{1}{2}$ & \verb*|\frac{1}{2}|\\
+					$a_1$ & \verb*|a_1|\\
+					$\sqrt{4} = 2$ & \verb*|\sqrt{4}=2|\\
+					$\forall$ & \verb*|\forall|\\
+					$\exists$ & \verb*|\exists|\\
+					\hline
+				\end{tabular}
+			\end{table}
+		\end{block}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
-		\begin{block}{Cách viết tập số}
+		\begin{block}{\textbf{Cách viết tập số}}
 			\pause
 			Sử dụng Lệnh \verb*|\mathbb{Tập_số_mà_bạn_muốn}|\\
 			\pause
@@ -309,25 +310,26 @@
 		\end{block}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{\thegroup. Ký tự Hy Lạp, các hàm toán học trong \LaTeX}}}
-		\textbf{Ví dụ}
-		\begin{block}{PDF}
+		\begin{block}{\textbf{CODE}}
+			\begin{verbatim}
+				\[
+				\forall \epsilon > 0,\, \exists N \in \mathbb{N},\,
+				n \geqslant N \Rightarrow |x_n - a| < \epsilon
+				\]
+			\end{verbatim}
+		\end{block}
+		\begin{block}{\textbf{PDF}}
 			The sequence $(x_n)$ is convergent if there exists a real number a such that
 			\[
 				\forall \epsilon > 0,\, \exists N \in \mathbb{N},\, n \geqslant N \Rightarrow |x_n - a| < \epsilon
 			\]
 		\end{block}
-		\begin{verbatim}
-		\[
-			\forall \epsilon > 0,\, \exists N \in \mathbb{N},\,
-			n \geqslant N \Rightarrow |x_n - a| < \epsilon
-		\]
-		\end{verbatim}
 	\end{frame}
 	%--------------------------------------------------------------------------
 
 	%-----------Phần của Phi Hùng
 	\setcounter{group}{2}
-	\begin{frame}[fragile]{\textbf{\textit{\stepcounter{subslide}\slidenum. Cách chèn các kí tự đặc biệt trong \LaTeX}}}
+	\begin{frame}[fragile]{\textbf{\textit{\textit{\stepcounter{subslide}\slidenum. Cách chèn các kí tự đặc biệt trong \LaTeX}}}}
 		\large Trong \LaTeX, ký tự đặc biệt là những ký tự không thể nhập trực tiếp như văn bản bình thường, vì chúng có ý nghĩa riêng trong hệ thống.
 		\begin{block}{\textbf{\textit{Ví dụ:}}}
 			\begin{itemize}
@@ -338,7 +340,7 @@
 			\textbf{$\to$ Vì vậy, nếu muốn hiển thị các ký tự này, ta có cách viết đặc biệt.}
 		\end{block}
 	\end{frame}
-    \begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}
+    \begin{frame}{\textbf{\textit{\stepcounter{subslide}\slidenum. Dùng dấu \textbackslash\ (escape) để chèn ký tự đặc biệt}}}
     	\begin{block}{\textbf{Một số ký tự phải thêm \textbackslash\ phía trước:}}
     		\begin{table}[h]
     			\begin{tabular}{|c|c|}
@@ -369,7 +371,7 @@
     	\end{block}
 		\textit{\textbf{Ví dụ:} Giá tiền là \textbf{\texttt{\textbackslash\$100}} và giảm \textbf{\texttt{20\textbackslash\%}}} $\to$ Giá tiền là \textbf{\$100} và giảm \textbf{20\%.}
 	\end{frame}
-	\begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng lệnh có sẵn (symbols)}}
+	\begin{frame}{\textbf{\textit{\stepcounter{subslide}\slidenum. Dùng lệnh có sẵn (symbols)}}}
 		\begin{block}{\textbf{Các kí hiệu phổ biến:}}
 			\begin{table}[h]
 				\begin{tabular}{|c|c|}
@@ -402,7 +404,7 @@
 		\end{block}
 		\textbf{Ví dụ:}\textit{Nhiệt độ là 30\textbf{\texttt{\textbackslash textdegree C}}} $\to$ Nhiệt độ là \textbf{30\textdegree C.}
 	\end{frame}
-	\begin{frame}{\textbf{\stepcounter{subslide}\slidenum. Dùng gói mở rộng}}
+	\begin{frame}{\textbf{\textit{\stepcounter{subslide}\slidenum. Dùng gói mở rộng}}}
 		\begin{block}{\textbf{Một số kí tự cần có package:}}
 			\begin{table}[h]
 				\begin{tabular}{|c|c|}
@@ -424,7 +426,7 @@
 		\end{block}
 	\end{frame}
 	\newpage
-	\begin{frame}[fragile]{\textbf{Ví dụ tổng hợp:}}
+	\begin{frame}[fragile]{\textbf{\textit{Ví dụ tổng hợp:}}}
 		\begin{block}{\textbf{CODE}}
 				\begin{Verbatim}[gobble=4,xleftmargin=1cm]
 				\documentclass{article}
@@ -442,7 +444,7 @@
 			\end{Verbatim}
 		\end{block}
 	\end{frame}
-	\begin{frame}{\textbf{Kết quả}}
+	\begin{frame}{\textbf{\textit{Kết quả}}}
 		\begin{block}{\textbf{PDF}}
 			\Large
 			\vspace{0.3cm} % Tạo khoảng trống phía trên cho đẹp
@@ -455,7 +457,7 @@
 			\vspace{0.3cm} % Tạo khoảng trống phía dưới cho đẹp
 		\end{block}
 	\end{frame}
-	\begin{frame}[fragile]{\textbf{Ví dụ công thức Toán học:}}
+	\begin{frame}[fragile]{\textbf{\textit{Ví dụ công thức Toán học:}}}
 		\begin{block}{\textbf{CODE}}
 				\begin{Verbatim}
 \[
@@ -483,11 +485,11 @@
 		\textcolor{blue!60}{\textbf{Chèn các biểu tượng hình ảnh trong \LaTeX}}
 	\end{frame}
 	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Ký hiệu toán học}}}%fragile cho phép sử dụng verb trong beamer
-		\begin{block}{Khai báo:}
+		\begin{block}{\textbf{Khai báo:}}
 			\verb|Môi trường \usepackage{amssymb}|
 		\end{block}
 		\pause
-		\begin{block}{Một vài kí tự toán học:}
+		\begin{block}{\textbf{Một vài kí tự toán học:}}
 			\begin{table}
 				\begin{tabular}{|c|l|}
 					\hline
@@ -506,31 +508,31 @@
 			\end{table}
 		\end{block}
 		\pause
-		\begin{block}{Lưu ý:}
+		\begin{block}{\textbf{Lưu ý:}}
 			Các kí hiệu toán học phải được đặt trong math mode (chế độ toán) như là \verb|$...$, \(...\), \[...\],...|
 		\end{block}
 	\end{frame}
 	\stepcounter{subslide}
 	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Biểu tượng dạng icon}}}
-		\begin{block}{Khai báo:}
+		\begin{block}{\textbf{Khai báo:}}
 			\verb|Môi trường \usepackage{pifont}|
 		\end{block}
 		\pause
-		\begin{block}{Cách dùng:}
+		\begin{block}{\textbf{Cách dùng:}}
 			\verb|\ding{<số>}|
 		\end{block}
 		\pause
-		\begin{block}{Ví dụ:}
+		\begin{block}{\textbf{Ví dụ:}}
 			\ding{51}: \verb|\ding{51}|, \ding{55}: \verb|\ding{55}|, \ding{60}: \verb|\ding{60}|,...
 		\end{block}
 	\end{frame}
 	\stepcounter{subslide}
 	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Icon hiện đại}}}
-		\begin{block}{Khai báo:}
+		\begin{block}{\textbf{Khai báo:}}
 			\verb|Môi trường \usepackage{fontawesome}|
 		\end{block}
 		\pause
-		\begin{block}{Một số icon hiện đại:}
+		\begin{block}{\textbf{Một số icon hiện đại:}}
 			\pause
 			\begin{table}
 				\begin{tabular}{|c|l|}
@@ -553,15 +555,15 @@
 	\end{frame}
 	\stepcounter{subslide}
 	\begin{frame}[fragile]{\textbf{\textit{\slidenum. Biểu tượng thực tế}}}
-		\begin{block}{Khai báo:}
+		\begin{block}{\textbf{Khai báo:}}
 			\verb|Môi trường usepackage{marvosym}|
 		\end{block}
 		\pause
-		\begin{block}{Ví dụ: }
+		\begin{block}{\textbf{Ví dụ:}}
 			\Telefon: \verb|\Telefon|, \Letter: \verb|\Letter|, \EUR: \verb|\EUR|, \Lightning: \verb|\Lightning| 
 		\end{block}
 		\pause
-		\begin{block}{Mục đích:}
+		\begin{block}{\textbf{Mục đích:}}
 			Cung cấp các biểu tượng mang tính thực tế.\\
 			Khác với pifont (thiên về kí hiệu), marvosym có icon như: điện thoại, email, tiền tệ, cảnh báo 
 		\end{block}
@@ -578,7 +580,7 @@
 			\caption{Ví dụ minh họa }
 		\end{figure}
 		\pause
-		\begin{block}{Nhận xét:}
+		\begin{block}{\textbf{Nhận xét:}}
 			Kết hợp nhiều package để tạo nhiều loại biểu tượng khác nhau.
 		\end{block}
 	\end{frame}
