@@ -1,8 +1,8 @@
-\frametitle{\textbf {\textit {Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
+\frametitle{\textbf {\textit {\slidenum . Ưu điểm và nhược điểm của biểu tượng có sẵn}}}
 \pause
 		\begin{columns}
 			\column{0.45\textwidth}
-			\begin{block}{Ưu điểm:}
+			\begin{block}{\textbf{Ưu điểm:}}
 				\begin{itemize}
 					\item Không cần file ảnh
 					\item Dễ sử dụng
@@ -12,11 +12,11 @@
 			\end{block}
 			\pause
 			\column{0.45\textwidth}
-			\begin{alertblock}{Nhược điểm:}
+			\begin{block}{\textbf{Nhược điểm:}}
 				\begin{itemize}
 					\item Không đa dạng bằng hình ảnh thật
 					\item Mộ số icon cần nhớ mã (như \verb|\ding{<số>}|).
 				\end{itemize}
-			\end{alertblock}
+			\end{block}
 		\end{columns}
 		
