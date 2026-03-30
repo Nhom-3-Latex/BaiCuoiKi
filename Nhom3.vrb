@@ -1,8 +1,0 @@
-\frametitle{\textbf{\textit{Câu hỏi 6}}}
-		\textbf{Câu hỏi:} Tại sao không thể dùng trực tiếp ký tự \_ trong văn bản \LaTeX?\\[0.5em]
-		\pause
-		\textbf{Trả lời:}
-		\begin{itemize}
-			\item Vì \_ là ký hiệu dành cho chỉ số dưới trong math mode
-			\item Muốn hiển thị phải viết \texttt{\textbackslash\_}
-		\end{itemize}
